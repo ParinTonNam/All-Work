@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store</title>
+  <script defer src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--   <link rel="stylesheet" href="src/style.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <ul>
+    <br>
+    <li style="float:right;">
+      <div class="usericon"><i class="bi bi-person-circle"></i></div>
+    </li>
+
+    <li style="float:right"><a id="login" onclick='logout()' href="login.html">Login</a></li>
+    <li style="float:right">
+      <p style="color: white; padding: 12px 10px;">|</p>
+    </li>
+    <li style="float:right">
+      <p style="color: white; padding: 12px 10px;" id="user">User</p>
+    </li>
+    <script>
+      if (localStorage.getItem("log") != null) {
+        document.getElementById("login").innerHTML = localStorage.getItem("log");
+        document.getElementById("user").innerHTML = localStorage.getItem("id");
+      }
+      else {
+        localStorage.setItem("id", "User");
+        localStorage.setItem("log", "Login");
+      }
+    </script>
+    <li style="float:right"><a href="cart.html">
+        <div class="cart">
+          <i class="bi bi-cart4"></i>
+          <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+      </a></li>
+    <form>
+      <a class="logo" href="index.html">
+        <img src="images/logo/logo-2.png" width="60" height="60">
+      </a>
+
+    </form>
+    <form style="margin-top: -1.2%; margin-right: 1.25%; margin-left: 1.15%;">
+      <a id="btn1" href="wishlist.html" class="btn">
+        <div class="cart">
+          <i class="fas fa-heart"></i>
+          <div id="favAmount" class="favAmount">0</div>
+        </div>
+      </a>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+  </ul>
+  <div class="searchbar">
+    <div class='search-input'>
+      <input type="text" placeholder="Type to search..">
+      <div class="auto-box">
+        <li>test</li>
+        <li>Coffee</li>
+      </div>
+    </div>
+  </div>
+  <script src="src/search.js"></script>
+  <div style="overflow: hidden;">
+  <div id="label" class="text-center"></div>
+  <div class="shopping-cart" id="shopping-cart">
+
+    <!-- cart.js -->
+
+  </div>
+  </div>
+</body>
+<script src="src/Data.js"></script>
+<script src="src/cart.js"></script>
+<!-- <script src="src/login.js"></script> -->
+<script type="text/javascript" src="src/login.js"></script>
+<script>
+  // ไอดี
+  function reply_click(clicked_id) {
+    let whereisproduct = [];
+    whereisproduct.push({
+      name: clicked_id,
+
+    });
+
+    localStorage.setItem("productid", JSON.stringify(whereisproduct));
+    // alert(clicked_id);
+  }
+</script>
+
+</html>

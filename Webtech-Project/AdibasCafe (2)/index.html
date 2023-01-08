@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Adibas Cafe</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script defer src="script.js"></script>
+  <script defer src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+  <!--   link slick -->
+  <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <!--   sss -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <ul>
+    <br>
+    <!--     icon -->
+    <li style="float:right;">
+      <div class="usericon"><i class="bi bi-person-circle"></i></div>
+    </li>
+    <!--     login -->
+    <li style="float:right"><a id="login" onclick='logout()' href="login.html">Login</a></li>
+    <li style="float:right">
+      <p style="color: white; padding: 12px 10px;">|</p>
+    </li>
+    <li style="float:right">
+      <p style="color: white; padding: 12px 10px;" id="user">User</p>
+    </li>
+    <script>
+      if (localStorage.getItem("log") != null) {
+        document.getElementById("login").innerHTML = localStorage.getItem("log");
+        document.getElementById("user").innerHTML = localStorage.getItem("id");
+      }
+      else {
+        localStorage.setItem("id", "User");
+        localStorage.setItem("log", "Login");
+      }
+    </script>
+    <li style="float:right"><a href="cart.html">
+        <div class="cart">
+          <i class="bi bi-cart4"></i>
+          <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+      </a></li>
+    <form>
+      <a class="logo" href="index.html">
+        <img src="images/logo/logo-2.png" width="60" height="60">
+      </a>
+    </form>
+    <form style="margin-top: -1.2%; margin-right: 1.25%; margin-left: 1.15%;">
+      <a id="btn1" href="wishlist.html" class="btn">
+        <div class="cart">
+          <i class="fas fa-heart"></i>
+          <div id="favAmount" class="favAmount">0</div>
+        </div>
+      </a>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+  </ul>
+  <div class="searchbar">
+    <div class='search-input'>
+      <input type="text" placeholder="Type to search..">
+      <div class="auto-box">
+        <li>test</li>
+        <li>Coffee</li>
+      </div>
+    </div>
+  </div>
+  <script src="src/search.js"></script>
+
+  <section class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/Adibas main.png" style="width: 100%;">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/kor-hai-dai-i-here.png" style="width: 100%;">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/chef_ton.png" style="width: 100%;">
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+  </section>
+  <br>
+
+  <!--Filter  -->
+  <section id="filter">
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn active' id="all" onclick="showall(this.id)">Show All</button>
+    </label>
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn' id="coff" onclick="showall(this.id)">Coffee</button>
+    </label>
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn' id="tEa" onclick="showall(this.id)">Tea</button>
+    </label>
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn' id="sOda" onclick="showall(this.id)">Soda</button>
+    </label>
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn' id="aPpetizer" onclick="showall(this.id)">Appetizer</button>
+    </label>
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn' id="mAindish" onclick="showall(this.id)">Main Dish</button>
+    </label>
+    <label class="switch" style='margin-top:0.3%;'>
+      <button class='bttn' id="dEssert" onclick="showall(this.id)">Dessert</button>
+    </label>
+    <script>
+      var btnSwitch = document.getElementById("filter");
+      var btns = btnSwitch.getElementsByClassName("bttn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+  </section>
+  <br>
+
+  <section id="main">
+    <div class="shop" id="shop"></div>
+    <div class="shop" id="coffee"></div>
+    <div class="shop" id="tea"></div>
+    <div class="shop" id="soda"></div>
+    <div class="shop" id="appetizer"></div>
+    <div class="shop" id="maindish"></div>
+    <div class="shop" id="dessert"></div>
+    <br>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+<!--     <img src="images/sleepton.png" style="margin-top: 1.25%; margin-left: 0%; width: 10%; height: 10%;"> -->
+    <div class="footertext">
+      <div style="margin-left: 22%;">
+        <h3>Adibas Cafe</h3><br>
+        <img src="images/logo/logo-1.png" width="100" height="100" margin-top: 10%; ><br>
+      </div>
+      <div style="margin-left: 3%;">
+        <h3 >Products</h3>
+        <a id='click' href="#">Coffee</a><br>
+        <a id='click' href="#">Tea</a><br>
+        <a id='click' href="#">Soda And Smoothie</a><br>
+        <a id='click' href="#">Appetizer</a><br>
+        <a id='click' href="#">Main Dish</a><br>
+        <a id='click' href="#">Dessert</a><br>
+      </div>
+    
+      <div style="margin-left: 3%;">
+        <h3>Conpany Info</h3>
+        <a id='click' href="#">Webtech</a><br>
+        <a id='click' href="#">IT KMITL</a><br>
+      </div>
+    
+      <div style="margin-left: 3%;">
+        <h3>Support</h3>
+        <a id='click' href="#">Help</a><br>
+        <a id='click' href="#">Store Locator</a><br>
+        <a id='click' href="#">Size Charts</a><br>
+        <a id='click' href="#">Payment</a><br>
+        <a id='click' href="#">Returns & Refunds</a><br>
+        <a id='click' href="#">Promotions</a><br>
+        <a id='click' href="#">Sitemap</a><br>
+      </div>
+    
+      <div style="margin-left: 3%;">
+        <h3>FOLLOW US</h3>
+        <a href="#"><i id='click' class="fab fa-facebook-square" ></i></a><br>
+        <a href="#"><i id='click' class="fab fa-instagram" ></i></a><br>
+        <a href="#"><i id='click' class="fab fa-twitter" ></i></a><br>
+        <a href="#"><i id='click' class="fab fa-twitch" ></i></a><br>
+        <a href="#"><i id='click' class="fab fa-steam" ></i></a><br>
+        <a href="#"><i id='click' class="fab fa-youtube" ></i></a><br>
+        <i></i>
+      </div>
+    </div>
+<!--     <img src="images/punlick.png" style="margin-top: 1.25%; margin-right: 0%; width: 7%; height: 7%;"> -->
+  </footer>
+
+  <!--jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!--slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--slick funct-->
+
+</body>
+<script>
+  // ไอดี
+  function reply_click(clicked_id) {
+    let whereisproduct = [];
+    whereisproduct.push({
+      name: clicked_id,
+
+    });
+
+    localStorage.setItem("productid", JSON.stringify(whereisproduct));
+    // alert(clicked_id);
+  }
+</script>
+
+
+<script src="src/Data.js"></script>
+<script src="src/main.js"></script>
+<!-- <script src="src/product.js"></script> -->
+<!-- <script src="src/wishlist.js"></script> -->
+<!-- <script src="src/login.js"></script> -->
+<script type="text/javascript" src="src/login.js"></script>
+
+</html>

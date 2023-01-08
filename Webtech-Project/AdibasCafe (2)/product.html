@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Adibas Cafe</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script defer src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <ul>
+    <br>
+    <!--     icon -->
+    <li style="float:right;">
+      <div class="usericon"><i class="bi bi-person-circle"></i></div>
+    </li>
+    <!--     login -->
+    <li style="float:right"><a id="login" onclick='logout()' href="login.html">Login</a></li>
+    <li style="float:right">
+      <p style="color: white; padding: 12px 10px;">|</p>
+    </li>
+    <li style="float:right">
+      <p style="color: white; padding: 12px 10px;" id="user">User</p>
+    </li>
+    <script>
+      if (localStorage.getItem("log") != null) {
+        document.getElementById("login").innerHTML = localStorage.getItem("log");
+        document.getElementById("user").innerHTML = localStorage.getItem("id");
+      }
+      else {
+        localStorage.setItem("id", "User");
+        localStorage.setItem("log", "Login");
+      }
+    </script>
+    <li style="float:right"><a href="cart.html">
+        <div class="cart">
+          <i class="bi bi-cart4"></i>
+          <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+      </a></li>
+    <form>
+      <a class="logo" href="index.html">
+        <img src="images/logo/logo-2.png" width="60" height="60">
+      </a>
+
+    </form>
+    <form style="margin-top: -1.2%; margin-right: 1.25%; margin-left: 1.15%;">
+      <a id="btn1" href="wishlist.html" class="btn">
+        <div class="cart">
+          <i class="fas fa-heart"></i>
+          <div id="favAmount" class="favAmount">0</div>
+        </div>
+      </a>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </ul>
+  <div class="searchbar">
+    <div class='search-input'>
+      <input type="text" placeholder="Type to search..">
+      <div class="auto-box">
+        <li>test</li>
+        <li>Coffee</li>
+      </div>
+      <!--           <div class='icon'>
+            <i class="fas fa-search"></i>
+          </div> -->
+    </div>
+  </div>
+  <script src="src/search.js"></script>
+
+  <!-- สินค้า -->
+
+  <div id="productcon">
+    <!--  <img src="images/coffee/img-5.2.png" class="pic"/>
+    <div class="infoproduct">
+      <h1>ชาแท้กาแฟไทย</h1>
+      <h1>฿640</h1>
+      <h4>รายละเอียดสินค้า</h4>
+      <p>ชาแท้จากชายไทยโดยเมล็ดกาแฟจากเมืองนอก ใส่ใจคุณภาพตั้งแต่ปลูกยันขาย พลาสติก0% อร่อยให้10 สะดวกให้100</p>
+      <p>ประเภท</p>
+
+      <label class="switch">
+      <input type="checkbox"  style="display:none"id="hot">
+        <span class="slider">
+          ร้อน
+        </span>
+      </input>
+      </label>
+        <label class="switch">
+      <input type="checkbox" style="display:none"id="iced"><span class="slider">เย็น</span></input>
+        </label>
+      <label class="switch">
+      <input type="checkbox"  style="display:none" id="blended"><span class="slider">ปั่น</span></input>
+      </label>
+      <p>ระดับ</p>
+      <div>
+      <label class="switch">
+      <input type="checkbox"  style="display:none" id="boba"><span class="slider">0%(ไม่หวาน)</span></input>
+      </label>
+        <label class="switch">
+      <input type="checkbox"  style="display:none"id="chili">
+          <span class="slider">
+            50%(หวานน้อย)
+          </span>
+        </input>
+        </label>
+          <label class="switch">
+      <input type="checkbox"  style="display:none"id="heart">
+            <span class="slider">
+              100%(หวานปกติ)
+            </span>
+          </input>
+          </label>
+            <label class="switch">
+      <input type="checkbox"  style="display:none" id="why">
+              <span class="slider">
+              150%(หวานตัดขา)
+              </span>
+            </input>
+            </label>
+        </div>
+      <p>ท็อปปิ้ง</p>
+      <div>
+      <label class="switch">
+      <input type="checkbox"  style="display:none" id="boba">
+        <span class="slider">
+          เพิ่มไข่มุก
+        </span>
+      </input>
+      </label>
+        <label class="switch">
+      <input type="checkbox"  style="display:none"id="chili">
+          <span class="slider">
+            เพิ่มพริก
+          </span>
+        </input>
+        </label>
+          <label class="switch">
+      <input type="checkbox"  style="display:none"id="heart">
+            <span class="slider">
+              เพิ่มใจ
+            </span>
+          </input>
+          </label>
+            <label class="switch">
+      <input type="checkbox"  style="display:none" id="why">
+              <span class="slider">
+              เพิ่มทำไม?
+              </span>
+            </input>
+            </label>
+      </div>
+        
+
+
+
+      
+
+
+      <br><br>
+      <i onclick="ok()" class="bi bi-patch-minus" style="font-size:30px;"> 1  </i>
+
+      <i onclick="ok()" class="bi bi-patch-plus" style="font-size:30px;"></i><br><br>
+    
+      <button onclick="change()" id="butter">Add to cart</button>
+      <!--           <div id=${id} class="quantity">
+              ${search.item === undefined ? 0 : search.item}
+          </div> -->
+    <!--   </div> -->
+  </div>
+
+
+</body>
+<!-- <script>
+Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script> -->
+<script src="src/Data.js"></script>
+<script src="src/product.js"></script>
+<script src="src/wishlist.js"></script>
+<!-- <script src="src/main.js"></script>
+<script src="src/cart.js"></script>
+<script src="src/wishlist.js"></script> -->
+<!-- <script src="src/login.js"></script> -->
+<script type="text/javascript" src="src/login.js"></script>
+<script>
+  // ไอดี
+  function reply_click(clicked_id) {
+    let whereisproduct = [];
+    whereisproduct.push({
+      name: clicked_id,
+
+    });
+
+    localStorage.setItem("productid", JSON.stringify(whereisproduct));
+    // alert(clicked_id);
+  }
+</script>
+
+</html>
