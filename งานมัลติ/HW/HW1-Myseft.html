@@ -1,0 +1,780 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<title>ชายฉกรรจ์พันธ์ุพี่จีน
+    </title>
+<style>
+		@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200&display=swap');
+      body{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/934098449597624421/wall3.jpg");
+      width:1720px;
+      height:1780px;
+        margin:4em;
+        font-family:sans-serif;
+        text-align:center;
+      }
+      .card{
+        width:300px;
+        height:400px;
+        margin:1em;
+        transform:translatey(5em);
+        perspective: 2000px;
+        transition:all .5s;
+        display:inline-block;
+      }
+      html {
+  scroll-behavior: smooth;
+}
+      .card-inner{
+        transform-style: preserve-3d;
+        position:relative;
+        width:100%;
+        height:100%;
+        transition:box-shadow .5s,transform 1s;
+        transform: rotateY(0deg);
+        box-shadow:0em .5em 1em #0002;
+        border-radius:1em;
+      }
+      .card-side{
+        border-radius:1em;
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        height:100%;
+        backface-visibility: hidden;
+      }
+      .card-front1{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680707350437938/pong.jpg");
+      }
+      .card-front2{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933772354033688596/pjean.jpg");
+      }
+      .card-front3{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933712630814765116/tonnam.jpg");
+      }
+      .card-front4{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933713006918004756/ton.jpg");
+      }
+      .card-front5{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933683670995329084/pj.jpg");
+      }
+      .card-front6{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680332853628948/game.jpg");
+      }
+      .card-front7{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680332232851527/aum.jpg");
+      }
+      .card-front8{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680332006363156/peak.jpg");
+      }
+      .card-front9{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680331763101696/tun.jpg");
+      }
+      .card-front10{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680332656508938/non.jpg");
+      }
+      .card-front11{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933680332463546420/lo.jpg");
+      }
+      .card-back{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933705319614398474/blank.jpg");
+        transform: rotateY(180deg) rotateZ(180deg);
+      }
+      .card-back1{
+        background-image: url("https://cdn.discordapp.com/attachments/930100919956287498/933741961809117244/pjeanback.jpg");
+        transform: rotateY(180deg) rotateZ(180deg);
+      }
+      .card-logo{
+        font-size:3rem;
+      }
+      a{
+        text-decoration:none;
+        color:black;
+        font-weight:bold;
+      }
+      .card:hover{
+        transform:translatey(2em);
+      }
+      .card:target .card-inner{
+        box-shadow:0em 3em 3em #0002;
+      }
+      .card:hover .card-inner{
+        transform:rotateY(180deg) rotateZ(540deg) scale(1.1);
+        transition:all 1s;
+      }
+      .bottom{
+        background:#fffc;
+        position:fixed;
+        left:0;
+        bottom:0;
+        padding:.5em;
+        z-index:100;
+        width:100%;
+        color:grey;
+      }
+      .card-social{
+        font-size:2.5em;
+      }
+      .card-pic{
+        width:60%;
+        overflow:hidden;
+        transition:all .3s;
+        margin-top:-1.35em;
+        border:1px solid #422221;
+      }
+      .card-name{
+        color:#422221;
+        font-family: 'Yesteryear', cursive;
+        font-size:3em;
+        margin-top:-1em;
+      }
+      .card-name2{
+        color:#422221;
+        font-family: 'Yesteryear', cursive;
+        font-size:2em;
+       	margin-top:-1.35em;
+      }
+      .card-name3{
+        color:#422221;
+        font-family: 'Maitree', serif;
+        font-size:20px;
+       	margin-top:1em;
+		  text-shadow:0px 2px 15px #422221;
+      }
+      .card{
+      position: absolute;
+      }
+    
+    #card-1{
+			top:600;
+        left:20px;
+      
+      }
+      #card-2{
+			top:850;
+        left:965;
+      }
+      #card-3{
+			top:450;
+        left:500;
+        
+      }
+      #card-4{
+			top:300;
+        left:965;
+      }
+      #card-5{
+			top:450;
+        left:1430;
+      }
+      #card-6{
+			top:600;
+        left:1895;
+      }
+      #card-7{
+			top:1100;
+        left:20px;
+      }
+      #card-8{
+			top:1250;
+        left:500;
+      }
+      #card-9{
+			top:1400;
+        left:965;
+      }
+      #card-10{
+			top:1250;
+        left:1430;
+      }
+      #card-11{
+			top:1100;
+        left:1895;
+      }
+      #desk{
+		position: relative;
+      width:1820px;
+      height:1180px;
+      background:;
+      margin:auto;
+      }
+    p.thick {
+ 		font-weight: bold;
+      font-family: 'Maitree', serif;
+		}
+      .card-jean{
+        position:relative;
+		  top:200;
+        left:1300;
+        width:30%;
+        overflow:hidden;
+        transition:all .3s;
+      }
+      .card-jean:hover{
+        transform:scale(1.1) rotate(2deg) translatey(-5%);
+      }
+      .card-jean2{
+        position:relative;
+		  top:200;
+        left:-1000;
+        width:25%;
+        overflow:hidden;
+        transition:all .3s;
+      }
+      .card-jean2:hover{
+        transform:scale(1.1) rotate(2deg) translatey(-5%);
+        
+      }
+      .beer{
+        position:relative;
+        font-size:120;
+        transition:all .3s;
+        left:400;
+        margin-right:3.5em;
+      }
+      .beer:hover{
+        transform:scale(1.1) rotate(1deg) translatey(0%);
+      }
+        .pic-title{
+        width:0%;
+        height:0%;
+        left:-240;
+        opacity: 1;
+        position:relative;
+        font-size:120;
+        transition:all .3s;
+        border-radius:30px;
+        background-color:#595959;
+        cursor:pointer;
+          
+      }
+      
+      .pic-title:hover{
+        transform:scale(1.1) rotate(0deg) translatey(10%);
+      }
+      .pic-title2:hover{
+        transform:scale(1.1) rotate(5deg) translatey(5%);
+      }
+
+      
+      .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    rotate:-5deg;
+  }
+    .modal-content {
+  background-color:;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+	}
+    .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+  .close:hover,
+	.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+      }
+      
+  .pic-title2{
+    width:70%;
+    	margin: auto;
+        margin-left:-100;
+        opacity: 1;
+        position:relative;
+        font-size:120;
+        transition:all .3s;
+      }
+
+    </style>
+</head>
+<body>
+<audio autoplay>
+<source src="https://cdn.discordapp.com/attachments/933642173247795233/934460217465372732/bg-music.mp3">
+</audio>
+<div id="desk">
+<button id="myBtn" class="pic-title"><img src="https://cdn.discordapp.com/attachments/930100919956287498/934112914346999818/wall5.png"></button>
+<div id="myModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>
+<img src="https://cdn.discordapp.com/attachments/933348107834495016/934462539432075284/img.png" class="pic-title2">
+</p>
+</div>
+</div>
+<script>
+
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+</div>
+<a href="#card-1">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/934083528113668166/pjeandrunk.png" class="card-jean">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/934079690749141023/received_630737158045332-removebg-preview.png" class="card-jean2">
+<marquee width="90%" behavior="alternate" scrollamount="40">
+<div class="beer">
+🍺🍻🍺
+</div>
+</marquee>
+<div class="card" id="card-1">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Kittinan Charoensong
+</h3>
+<h3 class="card-name2">
+64070007
+</h3>
+<h3 class="card-name3">
+วัดวาไม่เคยเข้า ขวดเหล้าไม่เคยวาง
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/POG92D/">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/k_poggg/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/KittinanPog">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front1">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/933677633839988786/271626971_4772767646094277_7152541870506499194_n.png" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-2">
+<div class="card-inner">
+<div class="card-side card-back1">
+<div>
+<h3 class="card-name">
+Tiwat Parkpoompaisal
+</h3>
+<h3 class="card-name2">
+63070068
+</h3>
+<h3 class="thick" class="card-name3">
+ความพยายามอยู่ที่ไหน<br>ความสำเร็จอยู่ไกลกว่านั้น
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/Jeantiwat">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/jeann.twt/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/JeanTiwat-dev">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+<div class="card-logo">
+</div>
+</div>
+<div class="card-side card-front2">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/933773012069650472/271826327_5037797679587535_3005086004218241093_n.jpg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-3">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Parin Dechakorn
+</h3>
+<h3 class="card-name2">
+64070064
+</h3>
+<h3 class="card-name3">
+เข้าเรียนทำไม ยังไงก็นอนอยู่ดี
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/TonNamParin/">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/tonnam_exe/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/ParinTonNam">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+<div class="card-logo">
+</div>
+</div>
+<div class="card-side card-front3">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/933781588976730112/15306397012587.jpg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-4">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Kaitgomthon Poonpol
+</h3>
+<h3 class="card-name2">
+64070009
+</h3>
+<h3 class="card-name3">
+เห็นโยมเเล้วหัวใจมันพองโต<br>ท่องนะโมพุทโธ เป็นซารางเฮโยได้ไง
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/kaitgomthon">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/kaitgomthon/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/botb1ame">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+<div class="card-logo">
+</div>
+</div>
+<div class="card-side card-front4">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/933702304438292500/IMG_4759_1.png" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-5">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Jiraphan Kwanruk
+</h3>
+<h3 class="card-name2">
+64070015
+</h3>
+<h3 class="card-name3">
+ความรักที่มั่นคง<br>ปลากะพงทอดน้ำปลา
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/jiraphan.kwanruk/">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/jiraphan_z/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/jiraphanz">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front5">
+<div class="card-logo">
+ <img src="https://cdn.discordapp.com/attachments/930100919956287498/933712557657690182/271752249_1128246207933644_8016860714260175824_n.jpg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-6">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Thankorn Amatrawet
+</h3>
+<h3 class="card-name2">
+64070024
+</h3>
+<h3 class="card-name3">
+ที่ใจสั่นเพราะกาแฟหรือแกฟ่ะ??
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/iovegame5/">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/thana.game/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/iovegame5">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front6">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/933675404974227497/unknown.png" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-7">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Putthipong Chobngam
+</h3>
+<h3 class="card-name2">
+64070079
+</h3>
+<h3 class="card-name3">
+กราบ1กราบ2กราบ3<br>สวัสดีครับท่านผู้เจริญ
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/puttipong.chobngam">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/__aummn/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/aummnptp">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front7">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/933676465327833138/aum.jpg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-8">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Passakorn Kamkaew
+</h3>
+<h3 class="card-name2">
+64070073
+</h3>
+<h3 class="card-name3">
+อย่าทำวันนี้ให้ดีที่สุด<br>เดี๋ยวพรุ่งนี้ไม่มีอะไรทำ
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/kevin.mask.75/">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/peak_p00/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/PassakornKamkaew">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front8">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/415510080130383875/933701373571264552/1642671076943.png" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-9">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Thampapon Prathum
+</h3>
+<h3 class="card-name2">
+64070046
+</h3>
+<h3 class="card-name3">
+อยากรวยเหมือนคนบนฟ้า
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/tbgk.kuki/">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/thampapon_/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/thampaponn">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front9">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/933677264040771594/80CF3D35-020E-4B52-AF5D-866E50ADC6F1_1_201_a.jpeg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-10">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Nantanon Jinkunthong
+</h3>
+<h3 class="card-name2">
+64070057
+</h3>
+<h3 class="card-name3">
+ขอเป็นโจรได้ไหม จะได้ลักคุณ
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/Nantanon.jinkunthong">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/nonlandzzzzz/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/Nonlandz">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front10">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/933675808445308958/272226541_4397587277012256_1314267784790888710_n.jpg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+</a>
+<a>
+<div class="card" id="card-11">
+<div class="card-inner">
+<div class="card-side card-back">
+<div>
+<h3 class="card-name">
+Bhumpanya Sathakurai
+</h3>
+<h3 class="card-name2">
+64070086
+</h3>
+<h3 class="card-name3">
+กลางคืนว่ามืดแล้ว อนาคตมืดกว่าอีก
+</h3>
+<div class="card-social">
+<a href="https://www.facebook.com/lmnewbie">
+<i class="fab fa-facebook">
+</i>
+</a>
+<a href="https://www.instagram.com/lo_stkr/">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/LoStkrXD">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+</div>
+<div class="card-side card-front11">
+<div class="card-logo">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/933676280128352256/IMG_20220120_142644.jpg" class="card-pic">
+</div>
+</div>
+</div>
+</div>
+<div>
+</div>
+</a>
+</body>
+</html>

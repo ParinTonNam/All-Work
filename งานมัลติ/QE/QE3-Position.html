@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>How to train you dragon but
+    </title>
+<style>
+      body{
+         background-image:url("https://cdn.discordapp.com/attachments/930100919956287498/940606235949023272/abstract-medieval-nautical-map-background-old-vintage-159658330.png");
+       background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+       
+       
+      }
+      .wrap {
+   display: block;
+   width: 100%;
+   text-align: center;
+}
+      .frame{
+        margin-top:1em;
+      justify-content: center;
+      display: inline-block;
+      overflow:hidden;
+		height: 800px;
+      width: 1500px;
+      position:relative;
+      background-image: url('https://cdn.discordapp.com/attachments/930100919956287498/940600907006095450/bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      }
+      .bg{
+        position:absolute;
+        z-index:-3;
+       animation:dookdik 2s infinite;
+       
+        width:100%;
+        height:100%;
+        background-image:url("https://cdn.discordapp.com/attachments/940608003789447168/940618507152945182/dragonbackground.png")
+      }
+      .sky{
+        position:absolute;
+        z-index:-4;
+        height:100%;
+        width:100%;
+        background-image:url("https://cdn.discordapp.com/attachments/933642173247795233/940600586167013376/sky.png");
+      }
+      .pic{
+        position:absolute;
+        font-size:2em
+  
+		}
+        @keyframes fly-l
+      {
+  			to {transform:translatex(-140vw);}
+      }
+      @keyframes dookdik{
+		50% {transform: translatey(20px);}
+      }
+       @keyframes fly-r
+      {
+  			to {transform:translatex(150vw);}
+      }
+      @keyframes levitate
+      {
+        to{transform:translatey(-700px)};
+      }
+      .pic img{
+		width:65%;
+      height:auto;
+      }
+      @keyframes moon
+      {
+        to{transform:rotate(20deg)};
+      }
+      
+
+      #dragon-1{
+        top:400px;
+        right:-400px;
+        animation:dookdik 1s linear 1s infinite, fly-l 15.5s 2s infinite linear;
+        z-index:-2;
+       }
+      #dragon-2{
+        	right:-150px;
+			top:0px;
+        animation:dookdik 1s 2s linear infinite;
+         z-index:2;
+    
+      }
+      #dragon-3{
+        left:210px;
+        animation:dookdik .8s linear 1s infinite, moon 1s infinite linear alternate ;
+       
+		}
+        #dragon-3 img {
+       	width:70%
+           
+       
+		}
+      #dragon-4{
+			top:200px;
+        left:-700px;
+  	 animation:dookdik 1s linear 1s  infinite, fly-r 20s 2s infinite linear;
+        z-index:-1;
+        
+      }
+      #dragon-5{
+		bottom:-340px;
+      right:500px;
+      animation:levitate 10s 4s infinite ease-in-out alternate;
+        z-index:-3;
+      }
+       #dragon-5 img {
+       	width:75%;
+      }
+      #ttt{
+		left:-40px;
+      top:30px;
+        z-index:2;
+        width:30%
+      }
+  
+      
+    
+    </style>
+</head>
+<body>
+<div class="wrap">
+<div class="frame">
+<div class="sky">
+</div>
+<div class="bg">
+</div>
+<div class="pic" id="dragon-1">
+<img src="https://cdn.discordapp.com/attachments/933642173247795233/940613086816120882/gamedragon.png">
+</div>
+<div class="pic" id="dragon-2">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940610711103602708/tundragon.png">
+</div>
+<div class="pic" id="dragon-3">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940615233196687461/twohead.png">
+</div>
+<div class="pic" id="dragon-4">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940611647838498846/796bfd59d11cac6e.png">
+</div>
+<div class="pic" id="dragon-5">
+<img src="https://cdn.discordapp.com/attachments/933762748129611806/940604270376534076/fatboy.png">
+</div>
+<div class="pic" id="ttt">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940607174923681863/logo.png">
+</div>
+</div>
+</div>
+</body>
+</html>

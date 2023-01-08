@@ -1,0 +1,131 @@
+<button onclick="startSound()">
+  Start
+</button>
+<button onclick="gain.gain.value = 0">
+  Stop
+</button>
+<input type="range" min="1" max="1000" value="440" oninput="changeF(this.value)">
+<span>F = <span id="theF_txt">440</span>Hz</span>
+<input type="range" min="0" max="100" value="100" oninput="changeV(this.value)">
+<br><br>
+
+<button class="event_key_q event_key_k" onclick="note(1046)"> C6
+</button>
+<button class="event_key_w" onclick="note(1174)"> D6
+</button>
+<button class="event_key_e" onclick="note(1318)"> E6
+</button>
+<button class="event_key_r" onclick="note(1396)"> F6
+</button>
+<button class="event_key_t" onclick="note(1567)"> G6
+</button>
+<button class="event_key_y" onclick="note(1760)"> A6
+</button>
+<button class="event_key_u" onclick="note(1975)"> B6
+</button>
+<br>
+<button class="event_key_a" onclick="note(523)"> C5 
+</button>
+<button class="event_key_s" onclick="note(587)"> D5 
+</button>
+<button class="event_key_d" onclick="note(659)"> E5 
+</button>
+<button class="event_key_f" onclick="note(698)"> F5 
+</button>
+<button class="event_key_g" onclick="note(783)"> G5 
+</button>
+<button class="event_key_h" onclick="note(880)"> A5 
+</button>
+<button class="event_key_j" onclick="note(987)"> B5 
+</button>
+<br>
+<button class="event_key_z" onclick="note(261)"> C4 
+</button>
+<button class="event_key_x" onclick="note(293)"> D4 
+</button>
+<button class="event_key_c" onclick="note(329)"> E4 
+</button>
+<button class="event_key_v" onclick="note(349)"> F4 
+</button>
+<button class="event_key_b" onclick="note(391)"> G4 
+</button>
+<button class="event_key_n" onclick="note(440)"> A4 
+</button>
+<button class="event_key_m" onclick="note(493)"> B4 
+</button>
+<br>
+<script>
+  // ดูก่อนว่ามีการสร้างเสียงหรีือยัง
+  let isStart = 0;
+  //สร้าง Context
+  audio = new (window.AudioContext || window.webkitAudioContext)()
+  //สร้าง Gain และ Osci ตัวหลัก
+  osci = audio.createOscillator()
+  gain = audio.createGain()
+  //เชื่อมกันหมด
+  osci.connect(gain)
+  gain.connect(audio.destination)
+  function startSound(){
+    if(isStart == 0){
+      osci.start();
+      isStart = 1;
+    }
+    else{
+      gain.gain.value = 1;
+    }
+  }
+  function changeF(val){
+    // เปลี่ยนความถี่
+    val = parseInt(val) //เปลี่ยน เป็น int
+    console.log(val) //ขอดูค่า
+    osci.frequency.value = val //เปลี่ยน f ของ osci ตัวแม่
+    theF_txt.innerText = val //แสดงผล F
+  }
+  function changeV(val){
+    //เปลี่ยนความดัง
+    val = parseInt(val) //เปลี่ยนเป็น Int
+    val = val/100 //เอามาหาร 100 ให้ได้ค่าสูงสุด = 1
+    gain.gain.value = val;
+    //เอาไปสั่ง gain ตัวแม่
+  }
+  function note(f){// เล่นโน๊ตเอง
+    console.log(f) //ดูความถี่
+    let time = audio.currentTime
+    //สร้าง Osci และ Gain ใหม่สำหรับการกดครั้งนี้เท่านั้น
+    let note_osci = audio.createOscillator()
+    let note_gain = audio.createGain()
+    // เชื่อมต่อกับ Audio แม่
+    note_osci.connect(note_gain)
+    note_gain.connect(audio.destination)
+    // ให้ค่าของเสียงครั้งนี้ เท่ากับที่ส่งมา
+    note_osci.frequency.value = f
+    // note_osci.type = 'sawtooth'
+    //เริ่มเปิด osci
+    note_osci.start()
+    // note_gain.gain.linearRampToValueAtTime(0,time+1) //แบบที่ 1
+    note_gain.gain.setValueCurveAtTime([1,0],audio.currentTime,.2) //แบบที่ 2
+  }
+  
+  // สร้างคำสั่งรอรับ keyboard
+  
+  document.body.onkeydown = function(event){
+    
+    let key = event.key //จับ key
+    console.log(event.key) //แสดง key ใน console.log
+    if(key == ','){
+      document.querySelector('.event_key_a').click()
+      document.querySelector('.event_key_a').style.background = 'pink'
+      setTimeout(()=>{
+        document.querySelector('.event_key_a').style.background = '#ccc'
+      },500)
+    }
+    else if(document.querySelector('.event_key_'+key) != null){//ดูว่าคีย์ที่กดมี elemment ที่ใช้คลาสไว้มั้ย
+      document.querySelector('.event_key_'+key).click() //สั่งกดแทน
+      document.querySelector('.event_key_'+key).style.background = 'pink'
+      setTimeout(()=>{
+        document.querySelector('.event_key_'+key).style.background = '#ccc'
+      },500)
+    }
+    
+  }
+</script>

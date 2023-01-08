@@ -1,0 +1,258 @@
+<html>
+<head>
+<title>Let's Start
+    </title>
+<style>
+      body{
+        background:#333;
+        margin:0;
+        font-family:sans-serif;
+      }
+      #my_picture{
+        width:600px;
+        height:400px;
+        background:#fff;
+        margin:auto;
+        margin-top:calc(50vh - 200px);
+        border-radius:5px;
+        overflow:hidden;
+        box-shadow:0px 10px 20px #0003;
+        position:relative;
+        perspective:1000px;
+        transition:background .3s;
+      }
+      #sky_wheel{
+        background:linear-gradient(to bottom,
+          hsl(60,100%,50%),
+          hsl(30,100%,50%) 50%,
+          hsl(280,100%,50%) 50%,
+          hsl(230,100%,50%)
+        );
+        width:100%;
+        padding-top:100%;
+        border-radius:100%;
+        position:absolute;
+        left:0;
+        bottom:-300px;
+        z-index:10;
+        transform:rotate(0deg);
+        transition:all 1s;
+      }
+      #my_picture[data-day="-1"] #sky_wheel{
+        transform:rotate(180deg);
+      }
+      #moon{
+        background:hsl(60,100%,90%);
+        box-shadow:0px 0px 30px hsl(60,100%,90%);
+        --w:100px;
+        width:var(--w);
+        height:var(--w);
+        position:absolute;
+        left:calc(50% - (var(--w)/2));
+        border-radius:100%;
+        bottom:50px;
+        transition:bottom 1s .4s;
+      }
+      #my_picture[data-day="1"] #moon{
+bottom:-150px;
+      }
+      #sun{
+        --w:100px;
+        position:absolute;
+        left:calc(50% - (var(--w)/2));
+        top:50px;
+        animation:sun 10s infinite linear;
+        transform:rotate(0deg);
+        transition:top 1s .4s;
+      }
+      #my_picture[data-day="-1"] #sun{
+        top:-150px;
+      }
+      .sun_ray{
+        background:hsl(30,100%,50%);
+        background-image:radial-gradient(hsl(40,100%,50%) 40%,hsl(20,100%,50%));
+        background-size:cover;
+        width:calc(var(--w) - 10px);
+        height:calc(var(--w) - 10px);
+        position:absolute;
+        left:5px;
+        top:5px;
+      }
+      .sun_ball{
+        background:hsl(60,95%,70%,0.6);
+        box-shadow:0px 0px 10px hsl(60,95%,70%,50%);
+        width:var(--w);
+        height:var(--w);
+        border-radius:100%;
+        position:relative;
+      }
+      .star{
+        --w:30px;
+        position:absolute;
+        left:100px;
+        bottom:100px;
+        width:var(--w);
+        height:var(--w);
+      }
+      .star_x,.star_y{
+        width:100%;
+        height:100%;
+        position:absolute;
+      }
+      .star_x{
+        transform:scaleX(.2);
+      }
+      .star_y{
+        transform:rotate(90deg) scaleX(.2) scaleY(.6);
+      }
+      .star_x::before,.star_y::before{
+        content:" ";
+        width:100%;
+        height:100%;
+        background:#fff;
+        box-shadow:0px 0px 10px #fff;
+        transform:rotate(45deg);
+        position:absolute;
+      }
+      @keyframes sun{
+        from{
+          transform:rotate(0deg)}
+        to{
+          transform:rotate(360deg)}
+      }
+      .s1{
+        left:unset;
+        right:100px;
+        bottom:50px;
+        animation:star 1.23s .5s infinite alternate;
+      }
+      .s2{
+        left:unset;
+        right:200px;
+        bottom:200px;
+        transform:scale(.6);
+        animation:star 0.68s .456s infinite alternate;
+      }
+      .s3{
+        left:unset;
+        bottom:200px;
+        transform:scale(.6);
+        animation:star 0.96s .94s infinite alternate;
+      }
+      .s4{
+        transform:scale(1.2);
+        animation:star 1.5s infinite alternate;
+      }
+      @keyframes star{
+        from{
+          opacity:1}
+        to{
+          opacity:0}
+      }
+      .land{
+        width:100%;
+        height:200px;
+        /*         background:#0002; */
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index:10;
+        font-size:100px;
+        font-weight:bold;
+        display:flex;
+        justify-content:center;
+        align-items:flex-end;
+        color:white;
+        line-height:70px;
+        transform-style:preserve-3d;
+        transform-origin:bottom;
+        transform:rotatex(100deg);
+        transition:all 1s .5s;
+      }
+      #my_picture[data-day="1"] .land.-day{
+        transform:rotatex(0deg);
+      }
+      #my_picture[data-day="1"] .land.-night{
+        transform:rotatex(-180deg);
+      }
+      #my_picture[data-day="-1"] .land.-day{
+        transform:rotatex(180deg);
+      }
+      #my_picture[data-day="-1"] .land.-night{
+        transform:rotatex(0deg);
+      }
+      #my_picture[data-day="-1"]{
+        background:hsl(260,80%,20%);
+      }
+      #my_picture[data-day="1"]{
+        background:hsl(200,100%,70%);
+      }
+      #toggle{
+        position:fixed;
+        bottom:1em;
+        right:1em;
+        background:#fff;
+        padding:.5em;
+        border-radius:4px;
+        cursor:pointer;
+      }
+    </style>
+</head>
+<body>
+
+<div id="my_picture" data-day="-1">
+<div id="sky_wheel">
+<div class="star s1 ">
+<div class="star_x">
+</div>
+<div class="star_y">
+</div>
+</div>
+<div class="star s2">
+<div class="star_x">
+</div>
+<div class="star_y">
+</div>
+</div>
+<div class="star s3">
+<div class="star_x">
+</div>
+<div class="star_y">
+</div>
+</div>
+<div class="star s4">
+<div class="star_x">
+</div>
+<div class="star_y">
+</div>
+</div>
+<div id="moon">
+</div>
+<div id="sun">
+<div class="sun_ray">
+</div>
+<div class="sun_ray" style="transform:rotate(30deg)">
+</div>
+<div class="sun_ray" style="transform:rotate(60deg)">
+</div>
+<div class="sun_ball">
+</div>
+</div>
+</div>
+
+<div class="land -day">
+<div class="landtext">
+DAY
+</div>
+</div>
+<div class="land -night">
+<div class="landtext">
+NIGHT
+</div>
+</div>
+</div>
+<div id="toggle" onclick="my_picture.dataset.day *= -1">
+Toggle
+</div>
+</body>
+</html>

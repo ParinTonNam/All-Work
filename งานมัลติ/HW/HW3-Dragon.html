@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>How to train you dragon but
+    </title>
+<style>
+      body{
+background-image:url("https://cdn.discordapp.com/attachments/930100919956287498/940606235949023272/abstract-medieval-nautical-map-background-old-vintage-159658330.png");
+       background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+       
+       
+      }
+      .wrap {
+   display: block;
+   width: 100%;
+   text-align: center;
+}
+      .frame{
+        margin-top:1em;
+      justify-content: center;
+      display: inline-block;
+      overflow:hidden;
+		height: 800px;
+      width: 1500px;
+      position:relative;
+      background-image: url('https://cdn.discordapp.com/attachments/930100919956287498/940600907006095450/bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      }
+      .city{
+        position:absolute;
+        z-index:-3;
+       animation:dookdik 2s infinite;
+       
+        width:100%;
+        height:100%;
+        background-image:url("https://cdn.discordapp.com/attachments/940608003789447168/940618507152945182/dragonbackground.png")
+      }
+      .jean{
+        position:absolute;
+        z-index:-4;
+        height:100%;
+        width:100%;
+        background-image: url('https://cdn.discordapp.com/attachments/930100919956287498/941619576473546753/SkyBackground.png');
+/*         background-repeat:no-repeat;
+        background:center; */
+      }
+      .art{
+        position:absolute;
+        z-index:-4;
+        height:100%;
+        width:100%;
+        background-image: url('https://cdn.discordapp.com/attachments/930100919956287498/941634969581809684/sky-03.png');
+       	
+      }
+      .ttt{
+      background-image:url("https://cdn.discordapp.com/attachments/930100919956287498/940607174923681863/logo.png");
+        position:absolute;
+        height:230px;
+        width:320px;
+        background-size:320px 230px;
+        margin-left:1em;
+        margin-top:1em;
+      }
+  		
+      .pic{
+        position:absolute;
+        font-size:2em
+  
+		}
+        @keyframes fly-l
+      {
+  			to {transform:translatex(-140vw);}
+      }
+      @keyframes dookdik{
+		50% {transform: translatey(20px);}
+      }
+       @keyframes fly-r
+      {
+  			to {transform:translatex(150vw);}
+      }
+      @keyframes levitate
+      {
+        to{transform:translatey(-700px)};
+      }
+      .pic img{
+		width:65%;
+      height:auto;
+      }
+      @keyframes moon
+      {
+        to{transform:rotate(20deg)};
+      }
+      
+      #dragon-1{
+        top:400px;
+        right:-400px;
+        animation:dookdik 1s linear 1s infinite, fly-l 15.5s 2s infinite linear;
+        z-index:-2;
+       }
+      #dragon-2{
+        	right:-150px;
+			top:0px;
+        animation:dookdik 1s 2s linear infinite;
+         z-index:-2;
+    
+      }
+      #dragon-3{
+        left:210px;
+        animation:dookdik .8s linear 1s infinite, moon 1s infinite linear alternate ;
+        z-index:-1
+       
+		}
+        #dragon-3 img {
+       	width:70%
+           
+       
+		}
+      #dragon-4{
+			top:200px;
+        left:-700px;
+  	 animation:dookdik 1s linear 1s  infinite, fly-r 20s 2s infinite linear;
+        z-index:-1;
+        
+      }
+      #dragon-5{
+		bottom:-340px;
+      right:500px;
+      animation:levitate 10s 4s infinite ease-in-out alternate;
+        z-index:-3;
+      }
+       #dragon-5 img {
+       	width:75%;
+      }
+/* 
+      button {
+    background-image: linear-gradient(to bottom right, red, yellow);
+    border-radius: 10px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+  } */
+      button {
+        width:150px;
+        height:30px;
+    text-align:center;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+      margin-left:2em;
+        font-size:1em;
+  }
+      #button1{
+          background-image: linear-gradient(to right , #A10100 ,#DA1F05, #F33C04,#FE650D, #FFC11F);
+        color:white;
+      }
+      #button2{
+          background-image: linear-gradient(to right, #2b4ca1, #2775b7,#22b8dc,#21daeb,#1df6fb);
+      }
+      #button3{
+          background-image: linear-gradient(to right, #9400D3, #4B0082,#0000FF,#00FF00,#FFFF00,	#FF7F00,#FF0000);
+        
+      }
+      .fire{
+		position:absolute;
+        width:100%;
+        height:150px;
+        bottom:10px;
+        background-image:url("https://cdn.discordapp.com/attachments/930100919956287498/941622264498122783/fire-unscreen.gif");
+        left:10;
+        z-index:-2;
+        background-size:250px;
+        opacity:0;
+        
+      }
+    </style>
+</head>
+<body>
+<div class="wrap">
+<div>
+<button id="button1" onclick="reset1()">กดเพื่อวางเพลิง</button>
+<button id="button2" onclick="reset2()">กดเพื่อดับไฟ</button>
+<button id="button3" onclick="reset3()">????</button>
+</div>
+<div class="frame">
+<dkv class="fire"></dkv>
+<div class="art">
+</div>
+<div class="jean">
+</div>
+<div class="city">
+</div>
+<div class="ttt">
+</div>
+<div class="pic" id="dragon-1">
+<img src="https://cdn.discordapp.com/attachments/933642173247795233/940613086816120882/gamedragon.png">
+</div>
+<div class="pic" id="dragon-2">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940610711103602708/tundragon.png">
+</div>
+<div class="pic" id="dragon-3">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940615233196687461/twohead.png">
+</div>
+<div class="pic" id="dragon-4">
+<img src="https://cdn.discordapp.com/attachments/930100919956287498/940611647838498846/796bfd59d11cac6e.png">
+</div>
+<div class="pic" id="dragon-5">
+<img src="https://cdn.discordapp.com/attachments/933762748129611806/940604270376534076/fatboy.png">
+</div>
+</div>
+</div>
+<script>
+
+function reset1() {
+  var elements = document.getElementsByClassName('fire'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.opacity = 0.5 ;
+	}
+	var elements = document.getElementsByClassName('art'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941634167920287775/bgfire2.png')";
+	}
+  
+  var elements = document.getElementsByClassName('city'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941628995156475924/dragonbackground2.png')";
+	}
+    
+  var elements = document.getElementsByClassName('jean'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941631972315385916/SkyBackground_meme.png')";
+	}
+    var elements = document.getElementsByClassName('ttt'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941625867354918943/logo2.png')";
+	}
+}
+  
+  function reset2() {
+	var elements = document.getElementsByClassName('art'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941634969581809684/sky-03.png')";
+	}
+      var elements = document.getElementsByClassName('city'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941621008685735937/dragonbackground.png')";
+	}
+    var elements = document.getElementsByClassName('jean'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941640184154427392/SkyBackground.png')";
+	}
+    var elements = document.getElementsByClassName('ttt'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/940607174923681863/logo.png')";
+	}
+     var elements = document.getElementsByClassName('fire'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.opacity = 0 ;
+	}
+}
+   function reset3() {
+	var elements = document.getElementsByClassName('jean'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941653271188234281/Webp.net-gifmaker_5.gif')";
+	}
+      	var elements = document.getElementsByClassName('art'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941641033790398464/rainbow.png')";
+	}
+    var elements = document.getElementsByClassName('city'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.backgroundImage = "url('https://cdn.discordapp.com/attachments/930100919956287498/941643398237012018/rainbowland.png')";
+	}
+      var elements = document.getElementsByClassName('fire'); // get all elements
+	for(var i = 0; i < elements.length; i++){
+		elements[i].style.opacity = 0 ;
+	}
+    }
+</script>
+</body>
+</html>

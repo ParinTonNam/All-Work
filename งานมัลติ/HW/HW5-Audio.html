@@ -1,0 +1,485 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<title>Our Beloved Summer
+    </title>
+<style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+      body{
+        
+        --ci1:hsl(237, 51%, 23%);
+        --ci2:hsl(237, 81%, 23%);
+        --ci3:hsl(237, 59%, 38%);
+        --ci4:hsl(237, 39%, 50%);
+        --ci5:hsl(8, 26%, 75%);
+        --ci6:hsl(10, 40%, 66%);
+        --ci7:hsl(10, 32%, 50%);
+        background:linear-gradient(to top,hsl(8, 73%, 92%),hsl(240, 40%, 92%) 70%);
+        margin:0;
+        font-family:sans-serif;
+        color:#357;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      }
+        html {
+  scroll-behavior: smooth;
+}
+      .bg-ci1{
+        background-color:var(--ci1) !important}
+      .bg-ci2{
+        background-color:var(--ci2) !important}
+      .bg-ci3{
+        background-color:var(--ci3) !important}
+      .bg-ci4{
+        background-color:var(--ci4) !important}
+      .bg-ci5{
+        background-color:var(--ci5) !important}
+      .bg-ci6{
+        background-color:var(--ci6) !important}
+      .bg-ci7{
+        background-color:var(--ci7) !important}
+      .bg-ci8{
+        color:var(--ci1) !important}
+      .cl-ci2{
+        color:var(--ci2) !important}
+      .cl-ci3{
+        color:var(--ci3) !important}
+      .cl-ci4{
+        color:var(--ci4) !important}
+      .cl-ci5{
+        color:var(--ci5) !important}
+      .cl-ci6{
+        color:var(--ci6) !important}
+      .cl-ci7{
+        color:var(--ci7) !important}
+      a{
+        text-decoration:none;
+        color:var(--ci3);
+      }
+      a:hover{
+        color:var(--ci4);
+      }
+      nav{
+        height:64px;
+        display:flex;
+       background-color:var(--ci5);
+        align-items:center;
+        justify-content:space-between;
+        box-sizing:border-box;
+        box-shadow:0px 5px 10px #0008;
+        font-size:30;
+        font-family: 'Caveat', cursive;
+        position:sticky;
+    		top:0px;
+        z-index:5;
+        
+      }
+      nav .site{
+        width:4rem;
+        margin-left:1rem;
+        
+      }
+      nav .nav-items{
+        height:100%;
+        width:calc(100% - 50rem);
+        display:flex;
+        justify-content:flex-end;
+      }
+      nav a{
+        height:100%;
+        display:inline-flex;
+        align-items:center;
+        padding:0 1em ;
+        font-weight:bold;
+        transition:all .2s;
+      }
+      nav a:hover{
+        color:white;
+        background:var(--ci2);
+      }
+      .logo{
+        font-size:2rem;
+        color:var(--ci3);
+      }
+      #header1{
+        height:40vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+          url(https://cdn.discordapp.com/attachments/700312699015266304/944251488941789245/42_20220218221806.png);
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+
+      }
+      #header2{
+        height:30vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+          url(https://cdn.discordapp.com/attachments/700312699015266304/944251488249733180/42_20220218221810.png);
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .header-inner{
+        background-image:
+          linear-gradient(to bottom,#0004,#000c);
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+        flex-flow:column wrap;
+        font-family: 'Oswald', sans-serif;
+      }
+      .header-inner h1,.header-inner h2{
+        margin:0;
+      }
+      .header-inner h2{
+        font-size:2em;
+        color:#fff;
+      }
+      #palette{
+        display:flex;
+        width:max-content;
+        margin:auto;
+        margin-top:-40px;
+        position:relative;
+        z-index:10;
+      }
+      .palette-color{
+        width:64px;
+        height:64px;
+        background:grey;
+        border-radius:10px;
+        margin-left:1.5em;
+        border:.5em solid #fff;
+
+        /*         box-sizing:border-box; */
+        box-shadow:0px 5px 10px #0002;
+      }
+      .palette-color:hover{
+        transform:scale(1.4) rotate(0deg) translatey(-10%);
+       	border-radius:2em;
+        
+      }
+      .palette-color
+      .palette-color:first-child{
+        margin:0;
+      }
+      .article{
+        max-width:900px;
+        margin:auto;
+        padding:2em;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .title{
+        color:fff;
+        background:var(--ci4);
+        padding:0.4em .5em;
+        display:inline-block;
+        font-size:2.4em;
+        font-family: 'Sriracha', cursive;
+        border-radius:15px;
+
+        
+      }
+      .subtitle{
+        font-size:1.4em;
+        color:var(--ci2);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .lead{
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .pic{
+        width:100%;
+        border-radius:15px;
+        box-shadow:0px 5px 10px #0005;
+        margin:1em 0 2em;
+      }
+      .hr{
+        display:block;
+        width:200px;
+        background:hsl(250, 39%, 37%);
+        height:4px;
+        margin:auto;
+      }
+      #footer{
+        background:var(--ci3);
+        background-image:linear-gradient(to top,#0000,#0004), 
+url(https://cdn.discordapp.com/attachments/700312699015266304/944244632563351582/AAAABRYhrUjffBwifJyX-5ng7Af0hG6oIPtfNgJkF5wcdQqmwbjfidqUIyg6Q0MIet8LsmF40lQw5NxC9ITIAnSOkmSkX_V9.png);
+        padding:2em 1 3em;
+        color:#fffb;
+        background-size:cover;
+        background-position:top center;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      #copy{
+        background:var(--ci5);
+        color:white;
+        padding:1em 0;
+        text-align:center;
+        font-size:.8em;
+        font-weight:700;
+        color:#fff8;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .social{
+        font-size:3em;
+      }
+      .caption{
+        text-align:center;
+        font-style:italic;
+        color:var(--ci3);
+        margin-bottom:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      blockquote {
+        margin: 1em;
+        background: #f4f5f5;
+        padding: 1em;
+        font-size: 1.3em;
+        border-left: 10px solid var(--ci1);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      #click{
+		 color:hsl(0, 100%, 100%);
+      }
+      #click:hover{
+        color:var(--ci8);
+      }
+      #test{
+		width: 10000px;
+      height: -1000px;
+      }
+      #font1{
+		font-family: 'Noto Sans Thai', sans-serif;
+      font-size:22;
+      }
+      #colortest{
+		background:linear-gradient(to top,hsl(8, 73%, 92%),hsl(240, 40%, 92%) 70%);
+      }
+      }
+    </style>
+</head>
+<body>
+<nav>
+<audio controls loop>
+<source src="https://cdn.discordapp.com/attachments/700312699015266304/947381264908947466/test.mp4" audio.volume=0.2;>
+</audio>
+<div id="font1">
+ทดสอบเพลง
+<button id="play" onclick="playNotes(melody, 1/5)">Play</button>
+
+</div>
+<div id="font1">
+เปลี่ยนขนาดตัวอักษร
+<input id='jean' type="range" min="1" max="1.5" step="0.1" ปุ่มเปลี่ยนขนาดอักษร ติดแล้ว>
+</div>
+<div id="font1">
+พื้นหลังตามใจฉัน
+<input type="range" min="0" max="360" value="30" oninput="changeHue(this)">
+</div>
+<div id="font1">
+พื้นหลัง 1
+<button onclick="document.querySelector('body').style.backgroundImage = `linear-gradient(to bottom right, MistyRose, MintCream)`;">
+click
+</button>
+</div>
+<div id="font1">
+พื้นหลัง 2
+<button onclick="document.querySelector('body').style.backgroundImage = `linear-gradient(to bottom right, PaleTurquoise, LightPink)`;">
+click
+</button>
+</div>
+<div class="nav-items">
+<a id="font1" href="#click" onclick="note(1254)">โจทย์ของตัวเอง</a>
+<a id="font1" href="https://www.youtube.com/watch?v=Afjv89Vv0sc" target="_blank" onclick="note(1174)">เพลงต้นฉบับ</a>
+<a href="https://www.netflix.com/th/title/81486372" onclick="note(1054)" target="_blank">Our Beloved Summer</a>
+<a href="https://www.netflix.com/th/" onclick="note(939)" target="_blank">Netflix </a>
+</div>
+</nav>
+<section id="header1">
+</section>
+<section class="article">
+<h2 class="title">
+Our Beloved Summer ร้อนนั้นเรารักกัน แนวโรแมนติก คอมเมดี้ อบอุ่นหัวใจ เมื่อรักแรกโคจรมาพบกันอีกครั้ง
+</h2>
+<p class="lead cl-ci4">
+<b>&emsp;&emsp;&emsp;&emsp;Our Beloved Summer ร้อนนั้นเรารักกัน
+</b> ซีรีส์รอมคอมจากค่าย SBS บอกเล่าเรื่องราวของอดีตรักแรกสมัยวัยเรียน ที่จบกันไปแบบไม่สวย แต่ต้องโคจรมาเจอกันอีกครั้ง เพราะหน้าที่การงาน ได้นักแสดงนำหนุ่มหน้าซื่อ ชเวอูชิก (คิมกีวู ครูสอนพิเศษภาษาอังกฤษจากภาพยนตร์รางวัลออสการ์ ชนชั้นปรสิต Parasite) ประกบคู่กับสาวหน้าเด็ก คิมดามี (โชอีซอ หมวยสุดมั่นจากธุรกิจปิดเกมแค้น Itaewon Class) เรียกว่าเป็นคู่ที่ถ้าให้นึกภาพเคมีของทั้งสองคน อาจจะนึกไม่ค่อยออกว่าจะมาแนวไหน แต่หลังจากดูไปสามตอน บอกเลย มันใช่ มันใช่มาก เคมีของทั้งคู่กับบทบาทที่ได้รับ บวกกับฝีมือคุณภาพที่มีกันเกินร้อย ดูแล้วลงตัว ทำอินสุด ๆ ไปเลย เรียกทั้งรอยยิ้ม เสียงหัวเราะ และน้ำตาในคราวเดียวกัน อั้ย! มันดีขนาดนั้นเลยเหรอ? อะ...ไปติดตามรีวิวซีรีส์เรื่องนี้กันเลยยยยยย
+</p>
+<h4 class="subtitle">
+เรื่องย่อ Our Beloved Summer ร้อนนั้นเรารักกัน (2021)
+</h4>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;นักเรียนอันดับ 1 กุกยอนซู (คิมดามี) และ นักเรียนลำดับที่ 267 ที่โหล่ของโรงเรียน ชเวอุง (ชเวอูชิก)</b> ที่ต้องมานั่งข้างกันเป็นเวลาหนึ่งเดือนเพื่อถ่ายทำสารคดีตามติดชีวิตนักเรียนมัธยมปลาย ด้วยความต่างของทั้งคู่ทำให้กัดกันเกือบตลอดเวลา แต่การได้ใช้เวลาร่วมกันทำให้ได้ใกล้ชิดกันมากขึ้น จนเกิดเป็นความรักและคบกันนานถึง 5 ปี แต่อยู่ ๆ กุกยอนซูก็ขอเลิก ด้วยสาเหตุที่ทุกวันนี้ชเวอุงก็ยังไม่รู้ว่าเพราะอะไร ทั้งโกรธและเสียใจเขาจึงเก็บความแค้นเอาไว้ และสั่งห้ามเธอไม่ให้มาเจอหน้ากันอีก ถ้ามาละก็... เขาจะฉีดน้ำและโปรยเกลือไล่เธอออกไป ทั้ง ๆ ที่จบกันไปแบบไม่สวยและไม่ได้เจอกันมาเกือบ 5 ปีแล้ว แต่ด้วยหน้าที่การงานที่รักยิ่ง กุกยอนซูจึงต้องแบกหน้าไปขอความร่วมมือจากชเวอุง ซึ่งเขาก็ฉีดน้ำใส่หน้าเธอและโรยเกลือไล่ตามที่เคยพูดไว้จริง ๆ
+</p>
+</section>
+<div class="header-inner" id="header2">
+<h1>
+</h1>
+<h2 style="font-weight:200">
+</h2>
+</div>
+<section class="article">
+<p>
+<b>&emsp;&emsp;&emsp;&emsp; ยิ่งไปกว่านั้นสารคดีของทั้งคู่บังเอิญกระแสดีกลับมาฮอตฮิตอีกครั้ง</b> ทำให้เพื่อนสนิทคิมจีอุง (คิมซังชอล) ที่ตอนนี้เป็นโปรดิวเซอร์รายการทีวี อยากจะทำสารคดีซีซั่นสองออกมา จึงขอร้องแกมบังคับให้ ชเวอุง และกุกยอน ซู รับข้อเสนอ เฮ้อ! กุกยอนซู ของเราก็แสนจะลำบากใจ ชเวอุงก็เช่นกันแต่เพราะอยากแก้แค้น อยากหาเรื่องให้กุกยอน ซู ไม่สบายใจ ถึงแม้ตัวเองจะลำบากใจไปด้วยก็ตาม เลยตกลงรับข้อเสนอทั้งการถ่ายทำสารคดีและการช่วยงานกุกยอนซู เมื่อต้องกลับมาใช้เวลาร่วมกัน ความสัมพันธ์ของทั้งคู่จะลงเอยด้วยการกลับมาคบกันอีกครั้ง หรือกลายเป็นจุดจบความสัมพันธ์ที่แม้แต่หน้าก็ยังไม่อยากมอง ก็ต้องไปลุ้นกันต่อทาง Netflix ทุกวันจันทร์และอังคาร และสามารถรับชมผ่านกล่อง TrueID ได้อีกด้วยยย
+</p>
+<div class="hr">
+</div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/944263590695817276/E0B881E0B8B8E0B881E0B8A2E0B8ADE0B899E0B88BE0B8B920E0B8A3E0B8B1E0B89AE0B89AE0B897E0B982E0B894E0B8A2E0B884E0B8B4E0B8A1E0B894E0B8B2E0B8A1E0B8B5.png" class="pic">
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;คิมดามี รับบทเป็น กุกยอนซู หัวหน้าทีมบริษัทรัน อาศัยอยู่กับย่า ฐานะทางบ้านยากจน</b> ตอนเป็นนักเรียนจึงตั้งใจเรียนและมุ่งมั่นอยากประสบความสำเร็จ เป็นหัวหน้าห้องและเป็นนักเรียนดีเด่นอันดับ 1 ของโรงเรียน รักการอ่านหนังสือ แต่ไม่ค่อยมีทักษะการเข้าสังคม รักศักดิ์ศรีและไม่ชอบให้ใครดูถูก เป็นคนแข็งนอกอ่อนใน ใจดี รักแฟน รักเพื่อน ส่วนตัวประทับใจสาวคิมดามีตั้งแต่ ธุรกิจปิดเกมแค้น (2020) ตอนนั้นที่ดูจำได้ว่าช่วงแรก ๆ แอบเชียร์ให้นางเอกเป็นควอนนารา แต่พอได้เห็นการแสดงและบทของน้องหนูคิมดามี บอกเลยหลงรักและแอบเชียร์หมวยสุดมั่นโชอีซอสุดแรง เรื่อง Our Beloved Summer ก็เช่นกันฝีมือการแสดงของคิมดามีนั้นสุดจริง ๆ ทั้งบทนักเรียนสาวแสนหยิ่ง สุดแสบ ยันบทหัวหน้าทีมคนเก่ง ที่แสนมุ่งมั่น ดูแล้วอิน หลงรักความเป็นกุกยอนซูไปแบบไม่รู้ตัว ชื่นชอบการแสดงของเธอ แต่ที่ชอบมากก็เป็นตอนที่ เธอถามชเวอุงว่า "สมมตินะ สมมติ" หรืออย่างตอนที่ต้องเล่นเป็นคนเมา หมวยก็เล่นใหญ่สมจริงซะเหลือเกิน ความสัมพันธ์ของยอนซูกับชเวอุงเป็นความสัมพันธ์แบบทั้งรักทั้งเกลียด คือเกลียดโกรธที่เลิกกันแต่ลึก ๆ ก็ยังรักกันอยู่ ต่างคนต่างยังไม่สามารถมูฟออนได้
+</p>
+<div class="hr">
+</div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/944263612342603816/E0B88AE0B980E0B8A7E0B8ADE0B8B8E0B88720E0B8A3E0B8B1E0B89AE0B89AE0B897E0B982E0B894E0B8A220E0B88AE0B980E0B8A7E0B8ADE0B8B9E0B88AE0B8B4E0B881.png" class="pic">
+<p>
+<b>&emsp;&emsp;&emsp;&emsp; ชเวอูชิก รับบทเป็น ชเวอุง ศิลปินหนุ่มหน้าซื่อ ในนามโกโอ</b> รักการวาดรูปสิ่งก่อสร้าง อาคารบ้านเรือน ไม่ชอบวาดรูปคน รักการอ่านหนังสือ มีความคิดเป็นของตนเอง รักความสงบและเรียบง่าย ไม่ทะเยอทะยาน คุณพ่อกับคุณแม่เป็นเจ้าของร้านอาหาร "ร้านกับอุง" ฐานะค่อนข้างดีไม่ขัดสน สมัยเป็นนักเรียน เรียนได้ที่โหล่ของโรงเรียน อกหักโดนกุกยอนซูบอกเลิก จึงมุ่งมั่นกับการวาดภาพจนประสบความสำเร็จ ส่วนตัวรู้จักชเวอูชิกครั้งแรกจากเรื่อง Train To Busan และประทับใจเขาจาก Parasite แสดงดีสมบทบาทครูสอนพิเศษเก๊ ในซีรีส์ Our Beloved Summer นับเป็นเรื่องแรกที่ชเวอูชิกรับบทพระเอก จริง ๆ ก็เห็นความสามารถทางการแสดงของเขามานานคิดว่าน่าจะได้เป็นพระเอกเข้าสักวัน ซึ่งเหมือนเรื่องนี้จะเขียนมาเพื่อเขาโดยเฉพาะ กับบท ชเวอุง หนุ่มซื่อ ๆ ออกบื้อนิด ๆ ที่ไม่เคยเอ่ยคำว่ารัก แต่ยังฝังใจกับรักแรก ซึ่งเขาถ่ายทอดตัวละครออกมาได้ดีมาก อินทุกซีนไม่ว่าจะ เศร้า โกรธ ใจลอย ซน ๆ บื้อ ๆ หรือ อินเลิฟ เคมีกับสาวคิมดามี ดูเป็นคู่กัดที่น่ารัก ความหวานมีไม่เยอะ ส่วนใหญ่จะเปรี้ยว ๆ เพราะกัดกันตลอด ดูไปอมยิ้มไป ส่วนซีนที่ต้องเลิกกัน ก็ทำเศร้าน้ำตาซึม
+</p>
+<div class="hr">
+</div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/944263628696207440/E0B884E0B8B4E0B8A1E0B88BE0B8B1E0B887E0B88AE0B8ADE0B8A520E0B8A3E0B8B1E0B89AE0B89AE0B897E0B980E0B89BE0B987E0B89920E0B884E0B8B4E0B8A1E0B888E0B8B5E0B8ADE0B8B8E0B887.png" class="pic">
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;คิมซังชอล รับบทเป็น คิมจีอุง</b> เพื่อนสนิทของชเวอุงตั้งแต่วัยเด็ก ที่ดันชื่ออุงเหมือนกันอีก รักและเป็นห่วงชเวอุง แต่ไม่แน่ใจในจุดประสงค์ในการกลับมาทำสารคดีซีซั่นสองของเขา ว่าเพราะต้องการให้กุกยอนซูกับชเวอุงคืนดีกัน หรือว่าเพราะมีใจให้ยอนซู?
+</p>
+<div class="hr">
+</div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/944263647318921237/E0B982E0B899E0B888E0B8ADE0B887E0B8ADE0B8B520E0B8A3E0B8B1E0B89AE0B89AE0B897E0B980E0B89BE0B987E0B89920NJ.png" class="pic">
+<p>
+<b>&emsp;&emsp;&emsp;&emsp; โนจองอี รับบทเป็น NJ</b> ไอดอลสาว รวย งานเยอะ แต่ดื้อและไม่มีความสุข ชื่นชอบผลงานของศิลปินโกโอ (ชเวอุง) และตัวศิลปินด้วย อยากจ้างโกโอให้มาวาดรูปตึกของเธอ
+</p>
+<br>
+<div class="hr">
+</div>
+<br>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;Our Beloved Summer</b> เป็นซีรีส์ที่ถ่ายทอดความรักของคนธรรมดาสองคน ที่มีทั้งความเป็นเด็ก มีชีวิตชีวา สดชื่น และกังวล กระอักกระอ่วน ทั้งหมดทั้งมวลต่างรู้สึกหวังดีแก่กัน แต่ไม่เคยพูดคำสำคัญ คำว่ารักออกไป แต่กลับแสดงออกมาในทางตรงกันข้าม เรื่องมันก็เลยยุ่งแสนยุ่ง ใครชอบแนวโรแมนติก คอมเมดี้ ดราม่าเล็ก ๆ แต่ลึกซึ้งกินใจหนัก ๆ ไม่ควรพลาด นักแสดงนำแสดงดีเลิศ อวยยศให้เลยค่ะ สามารถรับชม Our Beloved Summer ร้อนนั้นเรารักกัน ได้ทาง Netflix รับชมตอนใหม่ได้ทุกวันจันทร์และอังคาร
+</p>
+<div class="hr">
+</div>
+<br>
+<blockquote>
+<b>
+</b>
+<br>
+<b>ในฤดูร้อนปีนั้น เรื่องราวอะไรกันที่ทำให้เรื่องทั้งหมดนี้เกิดขึ้นกับพวกเขาทั้งสอง?</b>
+</blockquote>
+</section>
+<footer id="footer">
+<div class="article">
+<h3>
+TonNam Parin
+</h3>
+โจทย์ของเราในวันนี้ ก็คือออ
+<p>
+การปรับปรุงเว็ปจากครั้งที่แล้ว ด้วยการเพิ่ม
+<br>
+Web Audio ในการสร้างโน๊ตดนตรีหรือเสียงขึ้นมา
+<br>
+ไม่ว่าจะเป็นการลองทำเพลงจากเสียงเปียโน
+<br>
+(อาจไม่เหมือนเพลงต้นฉบับนะ555555 ลองกดเทียบได้เลยยย)
+<br>
+หรือการกดปุ่มในเว็ปจะมีเสียงโน้ตดนตรีออกมานั่นเอง
+<br>
+</p>
+<div class="social">
+<a href="https://www.instagram.com/tonnam_exe/" onclick="note(1174)" target="_blank" id="click">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://www.facebook.com/TonNamParin" onclick="note(1054)" target="_blank" id="click">
+<i class="fab fa-facebook-square">
+</i>
+</a>
+</div>
+</div>
+<script>
+      var ans = document.getElementById('jean');
+    ans.addEventListener('input', function () {
+      var size = ans.value;
+      document.body.style.fontSize = size + 'em';
+    })
+        
+    function changeHue(element){
+    let val = element.value;
+    document.body.style.background = `hsl(${val},100%,95%)`;
+    console.log(val)
+  }
+    function changetest(element){
+    let val = element.value;
+    document.body.style.background = `hsl(${val},100%,95%)`;
+    console.log(val)
+  }
+     
+  }
+        let [C4,D4b,D4,E4b,E4,F4,G4b,G4,A4b,A4,B4b,B4] = [3,4,5,6,7,8,9,10,11,12,13,14]; 
+      let [C5,D5b,D5,E5b,E5,F5,G5b,G5,A5b,A5,B5b,B5] = [15,16,17,18,19,20,21,22,23,24,25,26]; 
+      let [C6,D6b,D6,E6b,E6,F6,G6b,G6,A6b,A6,B6b,B6] = [27,28,29,30,31,32,33,34,35,36,37,38]; 
+      let [C7,D7b,D7,E7b,E7,F7,G7b,G7,A7b,A7,B7b,B7] = [39,40,41,42,43,44,45,46,47,48,49,50];
+		
+      let melody = [C4,F5,-1,E5,D4,C4,-1,-1,
+                    D4,E4,D4,-1,C4,-1,B4b,-1,C4,-1,-1,-1,
+                    E5,E5,F5,G5,G5,-1,-1,
+                    G4,-1,G4,F4,E4,D4,D4,E4,E4,D5,E4,-1,
+                    E4,E4,F4,G4,-1,G5,-1,
+                    G4,G5,-1,F4,E4,D5,D5,-1,E4,E4,D5,E5,-1,
+                    E4,F4,G4,-1,F4,E4,D4,C4,B4b,C4,C4,D4,D4,E4,-1,
+                    A4b,-1,G4,D4,C4,-1,C4,C4,-1,C4,-1,C4,C4,B4b,C4
+                   ]
+		
+  		let playTone = (frequency,timeToPlay) => {
+        let audioContext = new (window.AudioContext || window.webkitAudioContext)() 
+        let startTime = audioContext.currentTime 
+        let oscillator = audioContext.createOscillator()
+        let gain = audioContext.createGain()
+        let noteLength = 0.6
+        oscillator.frequency.value = frequency 
+        oscillator.type = 'sine'
+        oscillator.connect(gain)
+        gain.connect(audioContext.destination)
+        gain.gain.setValueAtTime(0.5,startTime + timeToPlay)
+        gain.gain.linearRampToValueAtTime(0,startTime + timeToPlay + noteLength)
+        oscillator.start(startTime + timeToPlay)
+        oscillator.stop(startTime + timeToPlay + noteLength)
+      }
+        
+      const playNotes = (notes,secondsPerBeat) => {
+
+            notes.forEach((noteNumber,index) => { 
+              if (noteNumber !== -1) {
+                  let frequency = 220 * 2 ** (noteNumber /12)
+                  let beatToPlay = index + (index % 2) / 6
+                  let timeToPlay = beatToPlay * secondsPerBeat 
+                  playTone(frequency,timeToPlay)}})}
+      </script>
+</footer>
+<footer id="copy">
+64070064 ต้นน้ำ – ปรินทร์
+</footer>
+</body>
+</html>

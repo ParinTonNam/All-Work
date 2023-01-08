@@ -1,0 +1,74 @@
+
+<style>
+  body{
+    height:100vh;
+    background-image:url('https://cdn.discordapp.com/attachments/700312699015266304/948074381270196224/cat-spin.gif');
+    background-size:cover;
+    perspective:300vmin;
+    margin:0;
+  }
+  div{
+    background-image:url('https://cdn.discordapp.com/attachments/700312699015266304/948076214214594650/oatmeal-meme.gif');
+        background-repeat:no-repeat;
+    background-size:cover;
+    height:100px;
+    width:100px;
+    top: calc(50vh - 50px);
+    left: calc(50% - 50px);
+    position:fixed;
+    border-radius:10px;
+    box-shadow:0px 10px 10px #0005;
+    transition:.3s;
+  }
+  div[data-type="test1"]{
+    border-radius:100px;
+  }
+    div[data-po="1"]{
+    top: 0;
+    left: calc(100% - 100px);
+  }
+  div[data-po="2"]{
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+  }
+  div[data-po="3"]{
+    top: calc(100% - 100px);
+    left: 0;
+  }
+  div[data-po="4"]{
+    top: calc(50vh - 50px);
+    left: calc(50% - 50px);
+  }
+  div[data-po="5"]{
+  	 top: calc("50% - 50px");
+    left: calc("50% - 50px");
+  }
+  div[data-type="test1"]{
+    border-radius:50%;
+  }
+  div[data-type="test2"]{
+    border-radius:10px;
+  }
+</style>
+<button onclick="wood.dataset.po='1'">
+ขวาบน
+</button>
+<button onclick="wood.dataset.po='2'">
+ขวาล่าง
+</button>
+<button onclick="wood.dataset.po='3'">
+ซ้ายล่าง
+</button>
+<button onclick="wood.dataset.po='4'">
+กลาง
+</button>
+<br>
+<button onclick="wood.dataset.type='test1'">
+กลม
+</button>
+<button onclick="wood.dataset.type= 'test2'">
+มน
+</button>
+<div id="wood" data-type="test2" data-po="4">
+</div>
+

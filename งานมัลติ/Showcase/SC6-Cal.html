@@ -1,0 +1,81 @@
+<style>
+  #box{
+    text-align:center;
+  }
+  body{
+    background-color:hsl(30,100%,80%);
+  }
+</style>
+<h1>
+Jabont
+</h1>
+<div id="box">
+</div>
+<label>ความกว้าง</label>
+<input type="number" min="1" id="input1" value="10" oninput="haaSenRobWong()">
+<label>ความยาว</label>
+<input type="number" min="1" id="input2" value="10" oninput="haaSenRobWong()">
+<br>
+<button onclick="haaSenRobWong()">
+หาเส้นรอบวง
+</button>
+<br><br><br>
+<button onclick="document.querySelector(`h1`).style.backgroundColor = `red`">
+สีแดง
+</button>
+<button>
+สีเขียว
+</button>
+<button>
+สีน้ำเงิน
+</button>
+<br>
+
+<input type="range" id="input3" min="0" max="360" value="30" oninput="changeHue(this)">
+<script>
+  function changeHue(element){
+    let val = element.value;
+    // แก้ CSS ด้วย JS
+    document.body.style.backgroundColor = `hsl(${val},100%,80%)`;
+    console.log(val)
+  }
+</script>
+<button onclick="haaSenRobWong()">
+หาเส้นรอบวง
+</button>
+<button onclick="PooChaiJaoChooKaiKorRooKunNaKa()">
+ใครกันไอทีคาสโนวา
+</button>
+<script>
+  function haaSenRobWong(){
+    // ดึงค่าจาก input เฉพาะเจาะจง
+    a = document.querySelector('#input1').value;
+    b = document.querySelector('#input2').value;
+    a = parseInt(a)
+    b = parseInt(b)
+    c = a+a+b+b;
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    output = `เส้นรอบวงของสี่เหลี่ยมกว้าง ${a}
+ยาว ${b}
+คือ ${c}
+หน่วย`;
+    document.querySelector('h1').innerHTML = output;
+  }
+  function rand(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+  function PooChaiJaoChooKaiKorRooKunNaKa(){
+    a = ["Maxxu","Trin","Win","Moopee","Odin","2B"];
+    // Array หลายมิติ
+    b = [];
+    b["max"] = [1,2,3]
+    b["trin"] = [4,5,6]
+    aMax = a.length-1;
+    aIndex = Math.floor(rand(0,aMax));
+    text = `แหละผู๋ชายที่เจ้าชู้ที่สุดในไอทีลาดกระบัง จนไม่สมควรคบเป็นแฟน ได๋แก่ <h2>${a[aIndex]}
+  </h2> นั่นเองงง`;
+    document.querySelector('#box').innerHTML = text;
+  }
+</script>

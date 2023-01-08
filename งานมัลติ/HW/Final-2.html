@@ -1,0 +1,279 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-			  UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<title>My Portfolio
+    </title>
+<style> 
+      @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+      body{
+        --ci1:hsl(237, 81%, 23%);
+        --ci2:hsl(237, 59%, 38%);
+        --ci3:hsl(237, 39%, 50%);
+        --ci4:hsl(8, 26%, 75%);
+        background:linear-gradient(to bottom,#fcedd7,#ffdcc2,hsl(8, 73%, 92%)
+          ,hsl(240, 40%, 92%) 70%,#a3dfff,#d7f7fc,#99b4ff);
+        margin:0;
+        font-family:sans-serif;
+        color:#357;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      }
+        html {
+  scroll-behavior: smooth;
+}
+      a{
+        text-decoration:none;
+        color:var(--ci2);
+      }
+      a:hover{
+        color: hsl(300, 100%, 57%);
+        transform: scale(1.1);
+      }
+      nav{
+        height:64px;
+        display:flex;
+       background-color:var(--ci4);
+        align-items:center;
+        justify-content:space-between;
+        box-sizing:border-box;
+        box-shadow:0px 5px 10px #0008;
+        font-size:30;
+        font-family: 'Caveat', cursive;
+        position:sticky;
+    		top:0px;
+        z-index:5;
+      }
+      nav .nav-items{
+        height:100%;
+        width:calc(100% - 1rem);
+        display:flex;
+        justify-content:flex-end;
+      }
+      nav a{
+        height:100%;
+        display:inline-flex;
+        align-items:center;
+        padding:0 1em ;
+        font-weight:bold;
+        transition:all .2s;
+      }
+      nav a:hover{
+        color:white;
+        background:var(--ci1);
+      }
+      #header1{
+        height:25vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+        url(https://cdn.discordapp.com/attachments/700312699015266304/979465127864709160/50_20220527022433.png);
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+      }
+      #header2{
+        height:20vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+		  url(https://cdn.discordapp.com/attachments/700312699015266304/979731326779408394/50_20220527200216.png);
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .header-inner{
+        background-image:linear-gradient(to bottom,#0004,#000c);
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+        flex-flow:column wrap;
+        font-family: 'Oswald', sans-serif;
+      }
+      .header-inner h1,.header-inner h2{
+        margin:0;
+      }
+      .header-inner h2{
+        font-size:2em;
+        color:#fff;
+      }
+      .article{
+        max-width:900px;
+        margin:auto;
+        padding:2em;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .title{
+        color:fff;
+        background:var(--ci3);
+        padding:0.4em .5em;
+        display:inline-block;
+        font-size:2.4em;
+        font-family: 'Sriracha', cursive;
+        border-radius:15px;
+      }
+      .subtitle{
+        font-size:1.4em;
+        color:var(--ci1);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .pic{
+        width:100%;
+        border-radius:15px;
+        box-shadow:0px 5px 10px #0005;
+        margin:1em 0 2em;
+      }
+      .hr{
+        display:block;
+        width:200px;
+        background:hsl(250, 39%, 37%);
+        height:4px;
+        margin:auto;
+      }
+      #footer{
+        background:var(--ci2);
+        background-image:linear-gradient(to top,#0000,#0004), 
+		  url(https://cdn.discordapp.com/attachments/415510080130383875/979696191983996928/555.png);
+        padding:2em 1 3em;
+        color:#fffb;
+        background-size:cover;
+        background-position:top center;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .social{
+        font-size:3em;
+      }
+      .center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+		}
+      #click{
+		 color:whitesmoke;
+      }
+      #click:hover{
+      color:blue;
+      }
+
+    </style>
+</head>
+<body>
+<nav>
+<audio id="bgm" src="https://cdn.discordapp.com/attachments/454598861974142977/979740501861355580/Happy_and_Fun_Pop_Background_Music_For_Videos.mp3" autoplay="true" loop></audio>
+<div class="nav-items">
+<a href="https://www.facebook.com/TonNamParin" target="_blank">Facebook </a>
+<a href="https://www.instagram.com/tonnam_exe/" target="_blank">Instagram </a>
+<a href="https://github.com/ParinTonNam" target="_blank">Github</a>
+</div>
+</nav>
+<section id="header1">
+</section>
+<section class="article">
+<h2 class="title">
+Portfolio
+</h2>
+<h3>
+<p>
+ชื่อ นาย ปรินทร์ เดชากรณ์ (ต้นน้ำ)<br>วันเกิด : 8 กุมภาพันธ์ พ.ศ. 2546<br>รหัสนักศึกษา 64070064<br>Party : P'jean Party Sec A<br>Project : Nilfheim<br>คติประจำใจ : รีบนอนตอนที่ยังมีโอกาสได้นอน<br>
+</h3>
+<h4 class="subtitle">
+</h4>
+</section>
+<div class="header-inner" id="header2">
+<h1>
+</h1>
+<h2 style="font-weight:200">
+</h2>
+</div>
+<section class="article">
+<h1 class="subtitle">
+วิชามัลติมีเดีย
+</h1>
+<h3>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp; วิชามัลติเป็นวิชาที่มีรูปแบบการเรียนไม่เหมือนวิชาไหนๆ</b> เป็นวิชาที่ทำให้เราได้ประสบการณ์ในการ<br>ทำงานจริงๆ 1 เทอมที่ผ่านมานี้มีเรื่องมากมายที่ได้เรียนรู้จากวิชามัลติ และทุกเรื่องที่ได้เรียนมานั่นนำมาใช้งานได้จริงๆ ครั้งแรกที่ผมได้เรียนวิชานี้ ผมคิดว่ามันเป็นเรื่องที่ยากและวุ่นวายมากสำหรับผม ผมเริ่มจากคนที่มี<br>พื้นฐานเป็นศูนย์ในการเขียนเว็ป จนได้มาเจอวิชามัลติ จะมีกี่วิชาที่ให้นักศึกษามาคุยกัน ทำงานกันเป็นปารตี้ ช่วยทำงานกันเป็นทีม จนทำให้รู้ว่ารู้จริงๆแล้ว การเขียนเว็ปก็ไม่ได้อย่างที่คิดนะเนี่ย ดังนั้นวิชามัลติเลยเป็นหนึ่งในประสบการณ์ที่ดีสุดๆ ของชีวิตปีหนึ่งเลย
+</p>
+</h3>
+<div class="hr">
+</div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/292630174954946560/979461355306385528/unknown_7.png" class="pic">
+<a href="https://codebox.jabont.com/branch/eef3a18f489a99d5d4ab6977cb311b34/?view" target="_blank" id="#text"><p style="text-align:center">My Team</p></a>
+<div class="hr"></div>
+<br>
+<img src="https://cdn.discordapp.com/attachments/292630174954946560/979461355742580736/unknown.png" class="pic">
+<a href="https://codebox.jabont.com/branch/1ea22bc631c7738c0b6a0ba2357636cd/?view" target="_blank"><p style="text-align:center">การบ้าน Position How to train to dragon</p></a>
+<div class="hr"></div>
+<h1 class="subtitle">
+สิ่งที่ได้รับตลอดเทอมที่ผ่านมา
+</h1>
+<h3>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp; สิ่งที่วิชามัลติได้ให้มา มันเป็นมากกว่าประสบการณ์</b> มันเป็นดั่งความสุขเล็กๆ ที่ถึงแม้จะไม่ได้ไปเรียนมอ แต่เราก็ได้เรียนกับเพื่อน ได้สนุกเหมือนได้ไปเรียนมอ ถึงเนื้อหาจะยาก หรือเกิดปัญหาอะไรบ้าง แต่เราก็มีเพื่อนๆ พี่ๆ TA TD คอยช่วยเหลือกันตลอด ให้กำลังใจกันเสมอ ทำให้เราได้รู้ว่าเราไม่ได้เรียนอยู่คนเดียว ดังนั้น<br>เว็ปนี้คือเทคนิคที่ได้เรียนจากวิชามัลติ ไม่ว่าจะเป็น สี HSL , css var , css calc(), Transform , hover ถึงจะไม่ครบทุกเทคนิค แต่ก็ตั้งใจทำให้ดีที่สุด หวังว่าทุกคนจะชอบนะคับ
+</p>
+</h3>
+<br>
+<br>
+<img src="https://cdn.discordapp.com/attachments/292630174954946560/979461355042127932/unknown_2.png" class="pic">
+<a href="https://codebox.jabont.com/branch/6c9e20c93ac6a4e88c302c603b1e5f29/?view" target="_blank"><p style="text-align:center"> การบ้าน SVG Arch </p></a>
+<div class="hr"></div>
+<img src="https://cdn.discordapp.com/attachments/292630174954946560/979463136312721468/unknown_3.png" class="pic">
+<a href="https://codebox.jabont.com/branch/a97d6b7b0b056481f615e56470e1b2f2/?view" target="_blank"><p style="text-align:center">Final SVG</p></a>
+<div class="hr"></div>
+<h1 class="subtitle">
+โปรเจคของพวกเรา
+</h1>
+<h3>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp; ในส่วนของโปรเจคที่พวกเราได้ทำขึ้นมา</b> ในส่วนของโปรเจคที่พวกเราได้ทำขึ้นมา ผมมีหน้าที่ในการดูแลภาพรวมของ landing page เป็นหลักในทั้งเรื่อง Code และ Art โปรเจคของเราเสร็จสมบูรณ์เพราะพวกเราทุกคนช่วยกันทำ ถึงจะเกิดปัญหาอะไรไปบ้าง แต่ทุกคนก็ยังช่วยกันแก้ปัญหาจนสุดท้าย โปรเจคของเราก็ผ่านไปได้อย่างสวยงาม
+</p>
+</h3>
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/979475241946452018/unknown_5.png" class="pic">
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/979686826455482388/unknown_6.png" class="pic">
+<a href="https://niflheim-project-multimedia.netlify.app/index.html" target="_blank"><p style="text-align:center">Project Final</p></a>
+<div class="hr"></div>
+</section>
+<footer id="footer">
+<div class="article">
+<h3>
+TonNam Parin
+</h3>
+<p>ขอบคุณเพื่อนๆ ทุกคนสำหรับ 1 เทอมนี้<br>ขอบคุณพี่ๆ TA TD และอาจารย์ที่สอนมาตลอดเทอม<br>ขอบคุณประสบการณ์ดีๆ ที่ได้จากคาบมัลตินี้<br>ขอบคุณสำหรับทุกๆ อย่างครับ
+</p>
+<div class="social">
+<a href="https://www.facebook.com/TonNamParin" target="_blank" id="click">
+<i class="fab fa-facebook-square">
+</i>
+</a>
+<a href="https://www.instagram.com/tonnam_exe/" target="_blank" id="click">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://github.com/ParinTonNam" target="_blank" id="click">
+<i class="fab fa-Github">
+</i>
+</a>
+</div>
+</div>
+<script>
+          var bgm = document.getElementById("bgm");
+          bgm.volume = 0.02;
+      </script>
+</footer>
+</body>
+</html>

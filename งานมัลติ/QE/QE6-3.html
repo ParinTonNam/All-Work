@@ -1,0 +1,44 @@
+
+<style>
+  body{
+    height:100vh;
+    background-image:url('https://cdn.discordapp.com/attachments/700312699015266304/948064041727832164/maxresdefault.png');
+    background-size:cover;
+    
+  }
+  div{
+    background-image:url('https://cdn.discordapp.com/attachments/700312699015266304/948081964752183346/853139ffd60e0adccf908502aa10d265.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:50vmin;
+    width:120vmin;
+    top:10vw;
+    left:20vw;
+    position:absolute;
+    border-radius:2vw;
+    box-shadow:0px 1vw 1vw #0005;
+    animation:test1 10s linear 1s infinite;
+     
+  }
+  @keyframes test1{
+      0%{
+/*         height:100%;
+        width:100%; */
+        box-shadow: 25px 5px 5px #0005;
+        
+    }
+    50% {transform:rotateY(250deg) rotateZ(10deg) rotateX(50deg); ;
+/*           height:100%;
+          width:100%; */
+          box-shadow: 50px 5px 5px #0005;}
+    75% {transform:rotateY(180deg) ;
+/*           height:100%;
+          width:100%; */
+          box-shadow: 75px 5px 5px #0005;}
+    100% {transform:rotateY(360deg) ;
+/*           height:100%;
+          width:100%; */
+          box-shadow: 100px 5px 5px #0005;}
+
+</style>
+<div></div>

@@ -1,0 +1,379 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<title>LaLaLand 100%
+    </title>
+<style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Pridi:wght@500&display=swap');
+      /*
+      font-family: 'Chonburi', cursive;
+      font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      font-family: 'Noto Sans Thai', sans-serif; 
+      */
+      body{
+        
+        --ci1:hsl(237, 51%, 23%);
+        --ci2:hsl(237, 81%, 23%);
+        --ci3:hsl(237, 59%, 38%);
+        --ci4:hsl(237, 39%, 50%);
+        --ci5:hsl(8, 26%, 75%);
+        --ci6:hsl(10, 40%, 66%);
+        --ci7:hsl(10, 32%, 50%);
+        background:linear-gradient(to top,hsl(8, 73%, 92%),hsl(240, 40%, 92%) 70%);
+        margin:0;
+        font-family:sans-serif;
+        color:#357;
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      }
+        html {
+  scroll-behavior: smooth;
+}
+      .bg-ci1{
+        background-color:var(--ci1) !important}
+      .bg-ci2{
+        background-color:var(--ci2) !important}
+      .bg-ci3{
+        background-color:var(--ci3) !important}
+      .bg-ci4{
+        background-color:var(--ci4) !important}
+      .bg-ci5{
+        background-color:var(--ci5) !important}
+      .bg-ci6{
+        background-color:var(--ci6) !important}
+      .bg-ci7{
+        background-color:var(--ci7) !important}
+      .bg-ci8{
+        color:var(--ci1) !important}
+      .cl-ci2{
+        color:var(--ci2) !important}
+      .cl-ci3{
+        color:var(--ci3) !important}
+      .cl-ci4{
+        color:var(--ci4) !important}
+      .cl-ci5{
+        color:var(--ci5) !important}
+      .cl-ci6{
+        color:var(--ci6) !important}
+      .cl-ci7{
+        color:var(--ci7) !important}
+      a{
+        text-decoration:none;
+        color:var(--ci3);
+      }
+      a:hover{
+        color:var(--ci4);
+      }
+      nav{
+        height:64px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        box-sizing:border-box;
+        box-shadow:0px 5px 10px #0008;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      nav .site{
+        width:4rem;
+        margin-left:1rem;
+      }
+      nav .nav-items{
+        height:100%;
+        width:calc(100% - 5rem);
+        display:flex;
+        justify-content:flex-end;
+      }
+      nav a{
+        height:100%;
+        display:inline-flex;
+        align-items:center;
+        padding:0 1em ;
+        font-weight:bold;
+        transition:all .2s;
+      }
+      nav a:hover{
+        color:white;
+        background:var(--ci2);
+      }
+      .logo{
+        font-size:2rem;
+        color:var(--ci3);
+      }
+      #header{
+        height:50vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+          url(https://cdn.discordapp.com/attachments/700312699015266304/936688609245933608/564_1.png);
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .header-inner{
+        background-image:
+          linear-gradient(to bottom,#0004,#000c);
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+        flex-flow:column wrap;
+        font-family: 'Oswald', sans-serif;
+      }
+      .header-inner h1,.header-inner h2{
+        margin:0;
+      }
+      .header-inner h2{
+        font-size:2em;
+        color:#fff;
+      }
+      #palette{
+        display:flex;
+        width:max-content;
+        margin:auto;
+        margin-top:-40px;
+        position:relative;
+        z-index:10;
+      }
+      
+      .palette-color:target{
+      }
+        #palette-color-1{
+			background:linear-gradient(to top,hsl(118, 39%, 37%),hsl(240, 40%, 92%) 70%);
+        }
+      
+      
+      .palette-color{
+        width:64px;
+        height:64px;
+        background:grey;
+        border-radius:10px;
+        margin-left:1.5em;
+        border:.5em solid #fff;
+
+        /*         box-sizing:border-box; */
+        box-shadow:0px 5px 10px #0002;
+      }
+      .palette-color:hover{
+        transform:scale(1.4) rotate(0deg) translatey(-10%);
+       	border-radius:2em;
+        
+      }
+      .palette-color
+      .palette-color:first-child{
+        margin:0;
+      }
+      .article{
+        max-width:900px;
+        margin:auto;
+        padding:2em;
+      }
+      .title{
+        color:fff;
+        background:var(--ci1);
+        padding:0.4em .5em;
+        display:inline-block;
+        font-size:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+        font-family: 'Chonburi', cursive;
+      }
+      .subtitle{
+        font-size:1.4em;
+        color:var(--ci2);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .lead{
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .pic{
+        width:100%;
+        border-radius:15px;
+        box-shadow:0px 5px 10px #0005;
+        margin:1em 0 2em;
+      }
+      .hr{
+        display:block;
+        width:200px;
+        background:hsl(250, 39%, 37%);
+        height:4px;
+        margin:auto;
+      }
+      #footer{
+        background:var(--ci3);
+        background-image:linear-gradient(to top,#0000,#0004), url(https://cdn.discordapp.com/attachments/700312699015266304/936688608948129862/55555_1.png);
+        padding:2em 1 3em;
+        color:#fffb;
+        background-size:cover;
+        background-position:top center;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      #copy{
+        background:var(--ci4);
+        color:white;
+        padding:1em 0;
+        text-align:center;
+        font-size:.8em;
+        font-weight:700;
+        color:#fff8;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .social{
+        font-size:3em;
+      }
+      .caption{
+        text-align:center;
+        font-style:italic;
+        color:var(--ci3);
+        margin-bottom:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      blockquote {
+        margin: 1em;
+        background: #f4f5f5;
+        padding: 1em;
+        font-size: 1.3em;
+        border-left: 10px solid var(--ci1);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      #click{
+		 color:hsl(0, 100%, 100%);
+      }
+      #click:hover{
+        color:var(--ci8);
+      }
+      
+    </style>
+</head>
+<body>
+<nav>
+<div class="site">
+<i class="fas fa-school logo">
+</i>
+</div>
+<audio controls autoplay loop>
+<source src="https://cdn.discordapp.com/attachments/700312699015266304/937261349505998898/X2Download.com_-_The_TOYS_-_100_Official_Music_Video_128_kbps.mp3" audio.volume=0.2;>
+</audio>
+<div class="nav-items">
+<a href="#click">About Me
+</a>
+<a href="https://www.netflix.com/title/81061734">Sweet Home
+</a>
+<a href="https://www.netflix.com/th/">Netflix
+</a>
+</div>
+</nav>
+<section id="header">
+<div class="header-inner">
+<h1>
+La La Land
+</h1>
+<h2 style="font-weight:200">
+Multimedia 2021
+</h2>
+</div>
+</section>
+<section id="palette">
+<div class="palette-color bg-ci1">
+</div>
+<div class="palette-color bg-ci2">
+</div>
+<div class="palette-color bg-ci3">
+</div>
+<div class="palette-color bg-ci4">
+</div>
+<div class="palette-color bg-ci5">
+</div>
+<div class="palette-color bg-ci6">
+</div>
+<div class="palette-color bg-ci7">
+</div>
+</section>
+<section class="article">
+<h2 class="title">
+รีวิว ‘Sweet Home’ เว็บตูนยอดฮิตสู่ซีรีส์แอคชั่นระทึกขวัญสุดท้าทาย ‘จะตายอย่างมนุษย์ หรืออยู่อย่างปีศาจ’
+</h2>
+<p class="lead cl-ci4">
+<b>&emsp;&emsp;&emsp;&emsp;Sweet Home ใครหลายๆ คนอาจจะเคยได้ยินชื่อมาบ้างแล้ว จากเว็บตูนชื่อดัง เป็นเรื่องที่ได้รับความนิยมเป็นอย่างมาก จนมียอดการอ่านรวม 500 ล้านครั้ง เเเละติดท็อปอันดับ 1 ของไลน์เว็บตูนอีกด้วย
+</b> ด้วยเนื้อเรื่องที่สร้างความระทึกใจ สุดล้ำของคนธรรมดาที่กลายเป็นสัตว์ประหลาดจากกิเลสซึ่งซุกซ่อนอยู่ในจิตใจ ภาพสัตว์ประหลาดที่น่าตื่นตาตื่นใจ และการเล่าเรื่องอันซับซ้อนซ่อนเงื่อน ล่าสุด Sweet Home ถูกนำมาสร้างเป็นซีรีส์ฉบับคนแสดง และเพิ่งจะฉายผ่านทาง Netflix ไปเมื่อวันที่ 18 ธ.ค. 2563 ที่ผ่านมา ก็ได้รับเสียงตอบรับจากแฟนๆ ที่ตั้งตาคอยเป็นอย่างดี
+</p>
+<h4 class="subtitle">
+เมื่อมนุษย์กลายพันธุ์เป็นสัตว์ประหลาด
+</h4>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;Sweet Home ถือเป็นซีรีส์แห่งปี 2020 อีกหนึ่งเรื่อง</b> ซึ่งกำกับโดยผู้กำกับมากความสามารถอย่าง อีอึงบก เจ้าของผลงานซีรีส์ชื่อดังที่ใครๆ ต้องรู้จักอย่างแน่นอน ซีรีส์ Descendants of the Sun ชีวิตเพื่อชาติ รักนี้เพื่อเธอ และ Mr. Sunshine สุภาพบุรุษตะวันฉาย ที่มาพร้อมกับนักเขียนและนักวาดเว็บตูนอย่าง คิมคันบีและฮวังยังชาน ที่สร้าง Sweet Home ให้โด่งดังเป็นพลุแตกในเว็บตูน รวมไปถึงยังมีทีมโปรดักชั่นด้าน VFX จากทีมฮอลลีวู้ด
+</p>
+<img src="https://cdn.discordapp.com/attachments/700312699015266304/936993371300458496/cd16ecd0dfc7f95f2603a8c8c8d37978.gif" class="pic">
+<div class="caption">
+La La Land is a 2016 American musical film written and directed by Damien Chazelle.
+</div>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;Sweet Home ได้รวมพลนักแสดงชั้นนำและผู้กำกับที่ชื่อเสียงมาถ่ายทอดเป็นเรื่องราวอันแสนประทับใจ</b> ซีรีส์เรื่องนี้นำแสดงโดย ซงคัง, อีจินอุค, อีซียอง, อีโดฮยอน, คิมนัมฮี, โกมินซี, พัคกยูยอง และโกยุนจอง นอกจากนี้ยังมีนักแสดงรุ่นเก๋าอย่างคิมกับซูและคิมซังโฮ ซึ่งซีรีส์เรื่องนี้ก็เป็น Original Netflix ขอบอกเลยว่าซีรีส์ Sweet Home จะแสดงให้เห็นถึงความเป็นมืออาชีพและจะได้เห็นเคมีที่แข็งแกร่งของนักแสดงอย่างแน่นอน
+</p>
+<div class="hr">
+</div>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;นอกจากทีมงานและนักแสดงแล้ว เนื้อหาของเรื่องราวยังสอนมุมมอง และให้แง่คิดอีกมากมายทั้ง การเอาชีวิตรอดจากสถานการณ์ที่คับขันในด้านต่างๆ และการเรียนรู้จิตใจที่แท้จริงของมนุษย์
+</b> เนื้อเรื่องซีรีส์เริ่มต้นจาก ฮยอนซู หนุ่มที่มีอาการฮิคิโคโมริ (เป็นภาษาญี่ปุ่นที่หมายถึงวัยรุ่นหรือผู้ใหญ่ผู้ปลีกตัวจากสังคมและขังตัวแยกจากโลกภายนอกอย่างเด็ดขาด) ในวัย 18 ปี ผู้ชิงชังชีวิตย้ายเข้าไปอยู่ที่อะพาร์ตเมนต์เก่าๆ แห่งหนึ่งชื่อกรีนโฮม หลังครอบครัวของเขาทั้งหมดประสบอุบัติเหตุเสียชีวิตอย่างน่าสลด
+เมื่อรู้สึกสิ้นหวังที่จะมีชีวิตอยู่ต่อไปตามลำพัง การฆ่าตัวตายจึงเป็นทางเลือกเดียวที่มี เขาเลือกวันเรียบร้อยว่าจะปลิดชีวิตตัวเองตอนสิ้นเดือนแล้วไปเข้านอน ก่อนจะตื่นขึ้นมาพบกับโลกที่หมดสิ้นแล้วซึ่งความหวัง ที่ที่มีแต่สัตว์ประหลาดกำลังกวาดล้างมวลมนุษยชาติให้สิ้นซาก
+</p>
+<div class="hr">
+</div>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;ผู้พักอาศัยที่กรีนโฮมคนอื่นๆ พบว่าพวกเขาไม่มีทางหนีและถูกล้อมไว้ด้วยสัตว์ประหลาดหลากหลายรูปแบบ</b> ตามกิเลสตัณหาที่บิดเบี้ยวของมนุษย์ สัตว์ประหลาดเหล่านี้แทบไม่มีทางเอาชนะได้และอันตรายมาก ระหว่างนั้น “การกลายร่าง” ของผู้คนก็เกิดขึ้นในหมู่ผู้รอดชีวิต รวมถึงฮยอนซูด้วย
+ตอนนี้พวกเขาต้องหาคำตอบเพื่อมีชีวิตรอด ในขณะที่คำถามคือ ถูกหรือผิด พวกเราหรือพวกมัน และที่สำคัญที่สุด จะให้ฮยอนซูมีชีวิตต่อไปหรือไม่
+</p>
+<div class="hr">
+</div>
+<p>
+<b>&emsp;&emsp;&emsp;&emsp;ตอนนี้ซีรีส์ Sweet Home มีทั้งหมด 10 ตอน</b> สำหรับใครที่ยังไม่ได้ดูต้องบอกก่อนเลยว่า คุณอาจจะติดใจจนดูครบจบแบบรวดเดียวทั้ง 10 ตอน และอาจจะอยากให้มี Season 2 ออกมาเร็วๆ ก็เป็นได้ หากอยากรู้ว่าเรื่องราวทั้งหมดของ Sweet Home เป็นอย่างไร ลุ้นระทึก เขย่าขวัญ สั่นประสาท แค่ไหน และอะไรที่เป็นสาเหตุที่แท้จริงที่ทำให้มนุษย์กลายร่างเป็นสัตว์ประหลาดได้นั้น สามารถติดตามรับชม Sweet Home ได้แล้วทาง Netflix
+</p>
+<div class="hr">
+</div>
+<blockquote>
+<b>
+</b>
+<br>
+<b>‘จะตายอย่างมนุษย์ หรืออยู่อย่างปีศาจ’</b>
+</blockquote>
+</section>
+<footer id="footer">
+<div class="article">
+<h3>
+TonNam Parin
+</h3>
+บทความสอดคล้องกับภาพสุดๆไปเลยเนอะ!
+<p>
+ซีรีส์ที่คุ้มค่ากับการอดนอน!!
+<br>
+รออะไรละจัดเลยสิครับ!!
+<br>
+<a href="https://www.netflix.com/title/81061734" id="click">
+ลุยโลดดดดดดดดดดดดดดดด!!!
+</a>
+</p>
+<div class="social">
+<a href="https://www.instagram.com/tonnam_exe/" id="click">
+<i class="fab fa-instagram">
+</i>
+</a>
+<a href="https://www.facebook.com/TonNamParin" id="click">
+<i class="fab fa-facebook-square">
+</i>
+</a>
+</div>
+</div>
+</footer>
+<footer id="copy">
+64070064 ต้นน้ำ – ปรินทร์
+</footer>
+</body>
+</html>
